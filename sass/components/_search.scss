@@ -1,0 +1,31 @@
+.search {
+  &--form {
+    border: 1px solid $color-grey-1;
+    border-radius: 5em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.6rem;
+    width: 50rem;
+    padding: 0 0.3rem;
+  }
+  &--form__input {
+    border: 0;
+    outline: 0;
+    border-radius: 5em;
+    width: 65%;
+    padding: 1rem;
+  }
+  &--svg {
+    margin-left: 2rem;
+    margin-right: 0.7rem;
+    height: 100%;
+    fill: $color-secondary;
+    
+    & path {
+        fill: inherit; 
+    }
+    
+  }
+  }

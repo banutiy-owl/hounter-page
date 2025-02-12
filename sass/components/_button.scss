@@ -1,0 +1,16 @@
+.btn {
+  
+  &--green {
+    @include button(
+      $bg-color: $color-primary,
+      $text-color: $color-white,
+      $height: 4.8rem,
+      $width: 15rem
+    );
+    font-size: 1.4rem;
+  }
+
+  &--text {
+    padding: 0 1rem;
+  }
+}
