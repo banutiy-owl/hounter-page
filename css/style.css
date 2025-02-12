@@ -98,7 +98,12 @@ body {
   cursor: pointer;
   background-color: #10B981;
   color: #fff;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  background: #10B981;
+  border: 1px solid #10B981;
+  border-radius: 5rem;
+  color: #fff;
+  transition: background-color 0.6s ease, border-color 0.6s ease, color 0.6s ease; }
   .btn--green::after {
     background-color: #10B981; }
   .btn--green svg {
@@ -107,9 +112,22 @@ body {
     width: auto;
     fill: currentColor;
     margin-left: 1rem; }
+  .btn--green:hover {
+    background: linear-gradient(45deg, #D1FAE5, #10B981, #0B9567);
+    background-size: 400% 400%;
+    color: #1B1C57;
+    border-color: #0B9567; }
 
 .btn--text {
   padding: 0 1rem; }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 
 .search--form {
   border: 1px solid #E0E3EB;
@@ -135,6 +153,9 @@ body {
   fill: #F59E0B; }
   .search--svg path {
     fill: inherit; }
+
+.search input:focus::placeholder {
+  color: #E0E3EB; }
 
 .partnership {
   margin-top: 4rem;
@@ -199,6 +220,16 @@ body {
       color: #1B1C57; }
     .carousel-item__content .item-light {
       color: #888B97; }
+  .carousel-item-first {
+    transition: 0.5s all; }
+    .carousel-item-first:hover .carousel-item__content {
+      padding-left: 13vh; }
+    .carousel-item-first:hover .carousel-item__image:nth-child(1) {
+      transform: translateX(0); }
+    .carousel-item-first:hover .carousel-item__image:nth-child(2) {
+      transform: translateX(20%); }
+    .carousel-item-first:hover .carousel-item__image:nth-child(3) {
+      transform: translateX(40%); }
   @media (min-width: 1500px) {
     .carousel-item-first .carousel-item__content {
       padding-left: 15vh; }
@@ -292,7 +323,8 @@ body {
   .navigation__item.navigation__item--property {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
   .navigation__item.navigation__item--signup {
     background-color: #D1FAE5;
     border: 1px solid #10B981;
@@ -313,6 +345,32 @@ body {
 
 .navigation__item-wrapper .navigation__item--signup {
   margin-top: 0; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+.dropdown-item {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.navigation__item--property:hover .dropdown-content {
+  display: block; }
 
 @media (max-width: 768px) {
   .navigation {

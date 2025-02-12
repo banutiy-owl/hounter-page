@@ -28,4 +28,8 @@
     }
     
   }
+
+  input:focus::placeholder{
+    color: $color-grey-1;
+  }
   }
