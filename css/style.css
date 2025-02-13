@@ -450,7 +450,8 @@ body {
     margin-right: 1.6rem; }
 
 .tour {
-  padding: 0 10rem; }
+  padding: 0 10rem;
+  position: relative; }
   .tour-content {
     display: flex; }
     .tour-content__left {
@@ -504,6 +505,14 @@ body {
           border-radius: 0.8rem; }
           .tour-content__right-imgs .small-image-1 {
             right: 11rem; }
+  .tour-gradient {
+    background: radial-gradient(ellipse at 90% 60%, rgba(255, 250, 130, 0.4) 0%, transparent 60%), radial-gradient(ellipse at 90% 50%, rgba(255, 152, 130, 0.4) 0%, rgba(255, 152, 130, 0) 70%);
+    position: absolute;
+    right: 0;
+    top: -35rem;
+    height: 80rem;
+    width: 53rem;
+    z-index: -10; }
 
 .header {
   position: absolute;

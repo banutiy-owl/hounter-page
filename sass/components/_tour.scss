@@ -1,5 +1,6 @@
 .tour {
   padding: 0 10rem;
+  position: relative;
 
   &-content {
     display: flex;
@@ -42,8 +43,6 @@
       }
     }
 
-    
-
     &__right {
       flex: 1;
       display: flex;
@@ -83,5 +82,25 @@
         }
       }
     }
+  }
+
+  &-gradient {
+    background: radial-gradient(
+        ellipse at 90% 60%,
+        rgba(255, 250, 130, 0.4) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at 90% 50%,
+        rgba(255, 152, 130, 0.4) 0%, rgba(255, 152, 130, 0) 70%
+
+      );
+    position: absolute;
+    right: 0;
+    top: -35rem;
+
+    height: 80rem;
+    width: 53rem;
+    z-index: -10;
   }
 }
