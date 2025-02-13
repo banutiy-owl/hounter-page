@@ -40,7 +40,7 @@ body {
     font-weight: 500; }
   .heading--4 {
     font-size: 2rem;
-    font-weight: 600; }
+    font-weight: 500; }
   .heading--sub {
     font-size: 1.8rem;
     font-weight: 500; }
@@ -128,6 +128,18 @@ body {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
+
+.subtitle {
+  margin-left: 10rem;
+  display: flex;
+  align-items: center;
+  color: #F59E0B; }
+  .subtitle::before {
+    content: "";
+    width: 3.2rem;
+    height: 1px;
+    background-color: #F59E0B;
+    margin-right: .8rem; }
 
 .search--form {
   border: 1px solid #E0E3EB;
@@ -223,7 +235,7 @@ body {
   .carousel-item-first {
     transition: 0.5s all; }
     .carousel-item-first:hover .carousel-item__content {
-      padding-left: 13vh; }
+      padding-left: 17rem; }
     .carousel-item-first:hover .carousel-item__image:nth-child(1) {
       transform: translateX(0); }
     .carousel-item-first:hover .carousel-item__image:nth-child(2) {
@@ -278,6 +290,121 @@ body {
         padding: 2rem 1rem;
         text-align: center; } }
 
+.radio-wrapper {
+  display: inline-block;
+  margin: 0 1rem; }
+  .radio-wrapper .radio {
+    display: none; }
+  .radio-wrapper .radio-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .radio-wrapper .radio-label .circle {
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #10B981;
+      background-color: #fff;
+      transition: all 0.3s ease; }
+      .radio-wrapper .radio-label .circle .arrow-left,
+      .radio-wrapper .radio-label .circle .arrow-right {
+        color: #10B981;
+        padding-top: .6rem; }
+  .radio-wrapper .radio:checked + .radio-label .circle {
+    background-color: #10B981;
+    border-color: #10B981; }
+    .radio-wrapper .radio:checked + .radio-label .circle .arrow-left,
+    .radio-wrapper .radio:checked + .radio-label .circle .arrow-right {
+      color: #fff; }
+  .radio-wrapper .radio:not(:checked) + .radio-label .circle {
+    background-color: #fff;
+    border-color: #10B981; }
+
+.featured-house__head-types {
+  margin: 10px; }
+  .featured-house__head-types input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0; }
+    .featured-house__head-types input[type="radio"]:checked + label {
+      background-color: #D1FAE5;
+      border: none;
+      color: #10B981; }
+  .featured-house__head-types label {
+    display: inline-block;
+    background-color: #fff;
+    color: #0B9567;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.4rem;
+    border: 1px solid #0B9567;
+    border-radius: 10rem; }
+    .featured-house__head-types label:hover {
+      background-color: #D1FAE5; }
+    .featured-house__head-types label .radio-house-option {
+      display: flex;
+      align-items: center; }
+      .featured-house__head-types label .radio-house-option svg {
+        margin-right: 1rem; }
+
+.featured-house {
+  padding: 15rem 0; }
+  .featured-house__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem; }
+  .featured-house__list {
+    display: flex;
+    overflow-x: auto;
+    padding: 5rem 0;
+    scroll-behavior: smooth;
+    gap: 3.2rem;
+    margin-left: 10rem; }
+    .featured-house__list::-webkit-scrollbar {
+      background-color: transparent; }
+    .featured-house__list-card {
+      position: relative;
+      flex-shrink: 0;
+      width: 37.6rem; }
+      .featured-house__list-card .mark {
+        display: inline-flex;
+        align-items: center;
+        padding: .8rem 1.6rem;
+        border-radius: 3.2rem;
+        position: absolute;
+        left: 2rem;
+        top: 32rem; }
+        .featured-house__list-card .mark svg {
+          margin-right: .8rem; }
+      .featured-house__list-card--1 .mark, .featured-house__list-card--4 .mark {
+        color: #EF4444;
+        background-color: #FEE2E2; }
+      .featured-house__list-card--2 .mark {
+        color: #1D4ED8;
+        background-color: #DBEAFE; }
+      .featured-house__list-card--3 .mark {
+        color: #0B9567;
+        background-color: #D1FAE5; }
+      .featured-house__list-card__image {
+        height: 38.2rem;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 2.4rem;
+        border-radius: 2.4rem; }
+      .featured-house__list-card .main-info {
+        margin-bottom: 2.4rem; }
+      .featured-house__list-card .owner-info {
+        display: flex; }
+        .featured-house__list-card .owner-info img {
+          border-radius: 100%;
+          width: 4rem;
+          height: 4rem;
+          margin-right: 1.6rem; }
+
 .header {
   position: absolute;
   top: 0;
@@ -291,7 +418,8 @@ body {
   width: 100%; }
   .header__logo {
     width: 100px;
-    height: auto; }
+    height: auto;
+    margin-left: 7rem; }
 
 .navigation {
   display: flex;

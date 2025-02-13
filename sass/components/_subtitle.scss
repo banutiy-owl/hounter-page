@@ -1,0 +1,14 @@
+.subtitle {
+  margin-left: 10rem;
+  display: flex;
+  align-items: center;
+  color: $color-secondary; 
+
+  &::before {
+    content: "";
+   width: 3.2rem;
+    height: 1px; 
+    background-color: $color-secondary; 
+    margin-right: .8rem;
+  }
+}

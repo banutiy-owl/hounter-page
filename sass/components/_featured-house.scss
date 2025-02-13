@@ -1,0 +1,92 @@
+.featured-house {
+
+    padding: 15rem 0;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10rem;
+    }
+
+    &__list {
+        display: flex;
+        overflow-x: auto;
+        padding: 5rem 0;
+        scroll-behavior: smooth; 
+        gap: 3.2rem; 
+
+        margin-left: 10rem; 
+
+      
+        &::-webkit-scrollbar {
+            background-color: transparent;
+        }
+
+      
+
+    &-card {
+        position: relative;
+        flex-shrink: 0;
+        width: 37.6rem;
+        
+        .mark {
+            display: inline-flex;
+            align-items: center;
+            padding: .8rem 1.6rem;
+            border-radius: 3.2rem;
+            position: absolute;
+            left: 2rem;
+            top: 32rem;
+
+            svg {
+                margin-right: .8rem;
+            }
+        }
+
+        &--1, &--4 {
+            .mark {
+                color: $color-danger;
+                background-color: $color-danger-light;
+            }
+        }
+
+        &--2 {
+            .mark {
+                color: $color-info;
+                background-color: $color-info-light;
+            }
+        }
+
+        &--3 {
+            .mark {
+                color: $color-primary-dark;
+                background-color: $color-primary-light;
+            }
+        }
+
+        &__image {
+            height: 38.2rem;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 2.4rem;
+            border-radius: 2.4rem;
+        }
+
+        .main-info {
+            margin-bottom: 2.4rem;
+        }
+
+        .owner-info {
+            display: flex;
+            
+            img {
+                border-radius: 100%;
+                width: 4rem;
+                height: 4rem;
+                margin-right: 1.6rem;
+            }
+        }
+    }
+}
+}

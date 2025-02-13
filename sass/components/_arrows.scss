@@ -1,0 +1,53 @@
+.radio-wrapper {
+  display: inline-block;
+  margin: 0 1rem;
+
+  .radio {
+    display: none;
+  }
+
+  .radio-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .circle {
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $color-primary;
+      background-color: $color-white;
+      transition: all 0.3s ease;
+
+      .arrow-left,
+      .arrow-right {
+        color: $color-primary;
+        padding-top:.6rem;
+        
+      }
+    }
+  }
+
+  .radio:checked + .radio-label {
+    .circle {
+      background-color: $color-primary;
+      border-color: $color-primary;
+
+      .arrow-left,
+      .arrow-right {
+        color: $color-white;
+      }
+    }
+  }
+
+  .radio:not(:checked) + .radio-label {
+    .circle {
+      background-color: $color-white;
+      border-color: $color-primary;
+    }
+  }
+}
