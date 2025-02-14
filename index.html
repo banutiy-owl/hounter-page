@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Hounter</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="icons/Logo.svg" alt="Logo" class="header__logo" />
+      </div>
+
+      <div class="navigation semi-bold">
+        <nav class="navigation__nav">
+          <div class="navigation__item">About us</div>
+          <div class="navigation__item">Article</div>
+          <div class="navigation__item navigation__item--property">
+            Property
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.1353 5.0018C9.87047 5.00135 9.61386 5.08254 9.40997 5.2313C9.29522 5.31506 9.20036 5.41793 9.13083 5.53402C9.0613 5.65011 9.01847 5.77714 9.00479 5.90782C8.9911 6.03851 9.00683 6.17029 9.05108 6.29562C9.09533 6.42094 9.16722 6.53735 9.26265 6.63818L14.3397 11.9863L9.44397 17.3444C9.34983 17.4465 9.27953 17.5639 9.23711 17.69C9.19469 17.8161 9.18099 17.9482 9.19679 18.079C9.21258 18.2097 9.25757 18.3364 9.32916 18.4518C9.40075 18.5672 9.49754 18.669 9.61396 18.7513C9.73121 18.8421 9.86853 18.9107 10.0173 18.9526C10.166 18.9945 10.323 19.0088 10.4784 18.9948C10.6337 18.9807 10.7841 18.9385 10.9201 18.8709C11.0561 18.8032 11.1747 18.7116 11.2685 18.6016L16.7422 12.6149C16.9089 12.4364 17 12.2124 17 11.9813C17 11.7502 16.9089 11.5263 16.7422 11.3477L11.0759 5.36101C10.9622 5.24026 10.8178 5.14481 10.6543 5.0824C10.4909 5.01999 10.3131 4.99238 10.1353 5.0018Z"
+              />
+            </svg>
+            <div class="dropdown-content">
+              <div class="dropdown-item">Property 1</div>
+              <div class="dropdown-item">Property 2</div>
+              <div class="dropdown-item">Property 3</div>
+            </div>
+          </div>
+          <div class="navigation__item-wrapper">
+            <div class="navigation__item navigation__item--signup">Sign up</div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section-hero">
+        <div class="container">
+          <div class="left">
+            <div class="heading u-margin-top-huge">
+              Find The Place To Live <span>Your Dreams</span> Easily Here
+            </div>
+            <p class="paragraph u-margin-top-medium">
+              Everything you need about finding your place to live will be here,
+              where it will be easier for you
+            </p>
+
+            <div class="search u-margin-top-medium">
+              <form action="#" class="search--form">
+                <svg
+                  width="24"
+                  height="24"
+                  class="search--svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 1C14.3869 1 16.6761 1.99337 18.364 3.76159C20.0518 5.5298 21 7.92801 21 10.4286C21 14.934 18.0975 19.081 12.402 22.8776C12.2818 22.9575 12.1424 23 12 23C11.8576 23 11.7182 22.9575 11.598 22.8776C5.9025 19.081 3 14.934 3 10.4286C3 7.92801 3.94821 5.5298 5.63604 3.76159C7.32387 1.99337 9.61305 1 12 1ZM12 7.28576C11.2044 7.28576 10.4413 7.61689 9.87868 8.20629C9.31607 8.7957 9 9.5951 9 10.4286C9 11.2622 9.31607 12.0616 9.87868 12.651C10.4413 13.2404 11.2044 13.5715 12 13.5715C12.7956 13.5715 13.5587 13.2404 14.1213 12.651C14.6839 12.0616 15 11.2622 15 10.4286C15 9.5951 14.6839 8.7957 14.1213 8.20629C13.5587 7.61689 12.7956 7.28576 12 7.28576Z"
+                    fill="#1B1C57"
+                  />
+                </svg>
+
+                <input
+                  type="text"
+                  class="search--form__input"
+                  placeholder="Search for the location you want!"
+                  id="location"
+                />
+                <button class="btn btn--green">
+                  <p class="btn--text">Search</p>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.1353 5.0018C9.87047 5.00135 9.61386 5.08254 9.40997 5.2313C9.29522 5.31506 9.20036 5.41793 9.13083 5.53402C9.0613 5.65011 9.01847 5.77714 9.00479 5.90782C8.9911 6.03851 9.00683 6.17029 9.05108 6.29562C9.09533 6.42094 9.16722 6.53735 9.26265 6.63818L14.3397 11.9863L9.44397 17.3444C9.34983 17.4465 9.27953 17.5639 9.23711 17.69C9.19469 17.8161 9.18099 17.9482 9.19679 18.079C9.21258 18.2097 9.25757 18.3364 9.32916 18.4518C9.40075 18.5672 9.49754 18.669 9.61396 18.7513C9.73121 18.8421 9.86853 18.9107 10.0173 18.9526C10.166 18.9945 10.323 19.0088 10.4784 18.9948C10.6337 18.9807 10.7841 18.9385 10.9201 18.8709C11.0561 18.8032 11.1747 18.7116 11.2685 18.6016L16.7422 12.6149C16.9089 12.4364 17 12.2124 17 11.9813C17 11.7502 16.9089 11.5263 16.7422 11.3477L11.0759 5.36101C10.9622 5.24026 10.8178 5.14481 10.6543 5.0824C10.4909 5.01999 10.3131 4.99238 10.1353 5.0018Z"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="partnership">
+              <p>Our Partnership</p>
+              <div class="partnership--companies">
+                <img src="imgs/partnership-traveloka.png" alt="Traveloka" />
+                <img src="imgs/partnership-tiketcom.png" alt="Tiketcom" />
+                <img src="imgs/partnership-airbnb.png" alt="Airbnb" />
+                <img src="imgs/partnership-tripadvisor.png" alt="Tripadvisor" />
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="carousel-container">
+              <div class="carousel">
+                <div class="carousel-item animated carousel-item-first">
+                  <img
+                    src="imgs/avatar-5.jpeg"
+                    alt=""
+                    class="carousel-item__image carousel-item__image-people"
+                  />
+                  <img
+                    src="imgs/avatar-6.jpeg"
+                    alt=""
+                    class="carousel-item__image carousel-item__image-people"
+                  />
+                  <img
+                    src="imgs/avatar-jenny.jpeg"
+                    alt=""
+                    class="carousel-item__image carousel-item__image-people"
+                  />
+                  <div class="carousel-item__content">
+                    <p class="semi-bold item-bold">1K+ People</p>
+                    <p class="item-light">Successfully Getting Home</p>
+                  </div>
+                </div>
+                <div class="carousel-item carousel-item-second">
+                  <img
+                    src="imgs/find-more-main.jpeg"
+                    alt=""
+                    class="carousel-item__image"
+                  />
+                  <div class="carousel-item__content">
+                    <p class="semi-bold item-bold">56 Houses</p>
+                    <p class="item-light">Sold Monthly</p>
+                  </div>
+                </div>
+                <div class="carousel-item carousel-item-third">
+                  <img
+                    src="imgs/avatar-7.jpeg"
+                    alt=""
+                    class="carousel-item__image carousel-item__image-people"
+                  />
+                  <div class="carousel-item__content">
+                    <p class="semi-bold item-bold">4K+</p>
+                    <p class="item-light">People Looking for New Homes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.partnership {
+  margin-top: 4rem;
+  width: 42rem;
+
+  &--companies {
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
