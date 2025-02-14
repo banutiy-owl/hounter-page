@@ -35,6 +35,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+    &:hover .dropdown-content {
+      display: block;
+    }
   }
 
   &.navigation__item--signup {
@@ -59,7 +63,6 @@
 }
 
 .navigation__item-wrapper {
-  
   height: 100%; 
  
 }
@@ -93,10 +96,6 @@
 
 .dropdown-item:hover {
   background-color: rgba($color-white, 0.2);
-}
-
-.navigation__item--property:hover .dropdown-content {
-  display: block;
 }
 
 
