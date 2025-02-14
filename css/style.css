@@ -264,26 +264,28 @@ body {
       color: #1B1C57; }
     .carousel-item__content .item-light {
       color: #888B97; }
-  .carousel-item-first .carousel-item__content {
-    padding-left: 12rem;
-    transition: padding-left 0.5s ease-in-out 0.01s; }
-  .carousel-item-second .carousel-item__content {
-    padding-left: 7rem; }
-  .carousel-item-third .carousel-item__content {
-    padding-left: 8rem; }
   .carousel-item-first {
-    position: relative; }
+    transition: 0.5s all; }
     .carousel-item-first:hover .carousel-item__content {
       padding-left: 17rem; }
-    .carousel-item-first:hover .carousel-item__image:nth-child(1) {
-      transform: translateX(0);
-      transition: transform 0.5s ease-out; }
-    .carousel-item-first:hover .carousel-item__image:nth-child(2) {
-      transform: translateX(20%);
-      transition: transform 0.5s ease-out; }
-    .carousel-item-first:hover .carousel-item__image:nth-child(3) {
-      transform: translateX(40%);
-      transition: transform 0.5s ease-out; }
+    .carousel-item-first-second .carousel-item-first__content {
+      padding-left: 7rem; }
+    .carousel-item-first-third .carousel-item-first__content {
+      padding-left: 8rem; }
+    .carousel-item-first-first {
+      position: relative; }
+      .carousel-item-first-first:hover .carousel-item__content {
+        padding-left: 16rem;
+        transition: padding-left 0.5s ease-in-out -.1s; }
+      .carousel-item-first-first:hover .carousel-item__image:nth-child(1) {
+        transform: translateX(0);
+        transition: transform 0.5s ease-out; }
+      .carousel-item-first-first:hover .carousel-item__image:nth-child(2) {
+        transform: translateX(20%);
+        transition: transform 0.5s ease-out; }
+      .carousel-item-first-first:hover .carousel-item__image:nth-child(3) {
+        transform: translateX(40%);
+        transition: transform 0.5s ease-out; }
 
 .section-hero {
   margin: -12.6rem 0;
