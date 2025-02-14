@@ -1,0 +1,12 @@
+.house-detail-grid {
+  @include grid(2, 2, 5.3rem, 1.6rem);
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap:1.6rem;
+    text-align: center;
+  }
+
+  width: 75%;
+}

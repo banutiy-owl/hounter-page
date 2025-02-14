@@ -1,6 +1,5 @@
 @mixin button($bg-color, $text-color, $height: 4.8rem, $width: 15rem) {
   text-decoration: none;
-  font-size: $default-font-size;
   border-radius: 10rem;
   padding: 1.2rem 2.4rem;
   line-height: 1.7143;
@@ -30,4 +29,13 @@
     fill: currentColor;
     margin-left: 1rem;
   }
+}
+
+
+@mixin grid($columns, $rows, $column-gap, $row-gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr); 
+  grid-template-rows: repeat($rows, auto);    
+  column-gap: $column-gap;                      
+  row-gap: $row-gap;                             
 }
