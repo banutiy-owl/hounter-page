@@ -84,10 +84,11 @@
     }
   }
 
-  &-first &__content {
-    padding-left: 12rem;
-    transition: padding-left 0.5s ease-in-out 0.01s;
-  }
+  &-first {
+    transition: 0.5s all;
+    &:hover .carousel-item__content {
+      padding-left: 17rem;
+    }
 
   &-second &__content {
     padding-left: 7rem;
