@@ -132,7 +132,7 @@ body {
     width: auto;
     fill: currentColor;
     margin-left: 1rem; }
-  .btn--green__contact-now {
+  .btn--green__contact {
     margin-left: 7rem;
     text-decoration: none;
     border-radius: 10rem;
@@ -149,9 +149,33 @@ body {
     cursor: pointer;
     background-color: #10B981;
     color: #fff; }
-    .btn--green__contact-now::after {
+    .btn--green__contact::after {
       background-color: #10B981; }
-    .btn--green__contact-now svg {
+    .btn--green__contact svg {
+      display: block;
+      height: 100%;
+      width: auto;
+      fill: currentColor;
+      margin-left: 1rem; }
+  .btn--green__subscribe {
+    text-decoration: none;
+    border-radius: 10rem;
+    padding: 1.2rem 2.4rem;
+    line-height: 1.7143;
+    height: 4.8rem;
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    background-color: #10B981;
+    color: #fff; }
+    .btn--green__subscribe::after {
+      background-color: #10B981; }
+    .btn--green__subscribe svg {
       display: block;
       height: 100%;
       width: auto;
@@ -663,6 +687,84 @@ body {
       padding: 0 3rem; }
       .findout__container--right .time-info {
         margin-top: 0.6rem; }
+
+.subscribe {
+  margin: 15rem 10rem;
+  position: relative; }
+  .subscribe__block {
+    text-align: center;
+    border-radius: 3.2rem;
+    padding: 5rem 0;
+    background-image: url("../../imgs/back.jpg");
+    background-size: cover;
+    background-position: center; }
+  .subscribe__form {
+    margin: 3rem auto;
+    border: 1px solid #E0E3EB;
+    border-radius: 5em;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.6rem;
+    width: 50rem;
+    padding: 0 0.3rem; }
+    .subscribe__form-input {
+      border: 0;
+      outline: 0;
+      border-radius: 5em;
+      width: 65%;
+      padding: 1rem; }
+    .subscribe__form-svg {
+      margin-left: 2rem;
+      margin-right: 0.7rem;
+      height: 100%;
+      fill: #1D4ED8; }
+      .subscribe__form-svg path {
+        fill: inherit; }
+    .subscribe__form input:focus::placeholder {
+      color: #E0E3EB; }
+  .subscribe__pictures #sub-1 {
+    height: 8.1rem;
+    width: 8.1rem;
+    top: 5rem;
+    left: 5rem; }
+  .subscribe__pictures #sub-2 {
+    height: 5.4rem;
+    width: 5.4rem;
+    top: 20rem;
+    left: 19rem; }
+  .subscribe__pictures #sub-3 {
+    top: 19rem;
+    left: 7rem; }
+  .subscribe__pictures #sub-4 {
+    top: 8rem;
+    left: 21rem; }
+  .subscribe__pictures #sub-5 {
+    height: 7rem;
+    width: 7rem;
+    top: 4rem;
+    right: 21rem; }
+  .subscribe__pictures #sub-6 {
+    height: 5.5rem;
+    width: 5.5rem;
+    bottom: 5rem;
+    right: 7rem; }
+  .subscribe__pictures #sub-7 {
+    top: 14rem;
+    right: 21rem; }
+  .subscribe__pictures #sub-8 {
+    top: 10rem;
+    right: 7rem; }
+  .subscribe__picture {
+    position: absolute;
+    border: 2px solid #fff; }
+    .subscribe__picture-square {
+      border-radius: 2.4rem; }
+    .subscribe__picture-circle {
+      border-radius: 100%;
+      height: 3.6rem;
+      width: 3.6rem; }
 
 .header {
   position: absolute;
