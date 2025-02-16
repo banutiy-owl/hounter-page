@@ -50,7 +50,8 @@ body {
 .heading {
   color: #1B1C57;
   font-size: 4rem;
-  font-weight: 700; }
+  font-weight: 700;
+  text-transform: capitalize; }
   .heading--2 {
     font-size: 3.2rem;
     font-weight: 600; }
@@ -182,19 +183,19 @@ body {
     width: 3.2rem;
     height: 1px;
     background-color: #F59E0B;
-    margin-right: .8rem; }
+    margin-right: 0.8rem; }
 
-.subtitle-about {
+.subtitle-above {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #F59E0B; }
-  .subtitle-about::before {
+  .subtitle-above::before {
     content: "";
     width: 3.2rem;
     height: 1px;
     background-color: #F59E0B;
-    margin-bottom: .8rem; }
+    margin-bottom: 0.8rem; }
 
 .search--form {
   border: 1px solid #E0E3EB;
@@ -603,6 +604,65 @@ body {
     background-color: #E0E3EB;
     border-radius: 50%;
     transition: background-color 0.3s; }
+
+.findout {
+  padding: 0 10rem; }
+  .findout__head {
+    text-align: center; }
+    .findout__head button {
+      margin: 2.4rem auto 3rem; }
+    .findout__head h2 {
+      margin-top: 0.6rem; }
+  .findout__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem; }
+  .findout__card {
+    display: flex; }
+    .findout__card:nth-child(n + 4) {
+      display: none; }
+    .findout__card-image {
+      width: 20rem;
+      object-fit: cover;
+      margin-right: 3.2rem;
+      border-radius: 1.6rem; }
+    .findout__card-owner-info {
+      display: flex;
+      align-items: center; }
+      .findout__card-owner-info img {
+        border-radius: 100%;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 1.6rem; }
+    .findout__card-title {
+      margin-top: 1.2rem; }
+    .findout__card-main {
+      position: sticky;
+      top: 0;
+      z-index: 10; }
+      .findout__card-main-image {
+        height: 28rem;
+        width: 58rem;
+        object-fit: cover;
+        border-radius: 1.6rem;
+        margin-bottom: 1.4rem; }
+      .findout__card-main-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem; }
+  .findout .time-info {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 1.6rem; }
+  .findout__container {
+    display: flex; }
+    .findout__container--left {
+      flex: 1; }
+    .findout__container--right {
+      flex: 1;
+      padding: 0 3rem; }
+      .findout__container--right .time-info {
+        margin-top: 0.6rem; }
 
 .header {
   position: absolute;

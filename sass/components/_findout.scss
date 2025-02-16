@@ -1,0 +1,91 @@
+.findout {
+  padding: 0 10rem;
+  &__head {
+    text-align: center;
+
+    button {
+      margin: 2.4rem auto 3rem;
+    }
+
+    h2 {
+      margin-top: 0.6rem;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  &__card {
+    display: flex;
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+
+    &-image {
+      width: 20rem;
+      object-fit: cover;
+      margin-right: 3.2rem;
+      border-radius: 1.6rem;
+    }
+
+    &-owner-info {
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 100%;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 1.6rem;
+      }
+    }
+
+    &-title {
+      margin-top: 1.2rem;
+    }
+
+    &-main {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      &-image {
+        height: 28rem;
+        width: 58rem;
+        object-fit: cover;
+
+        border-radius: 1.6rem;
+        margin-bottom: 1.4rem;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+    }
+  }
+  .time-info {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 1.6rem;
+  }
+
+  &__container {
+    display: flex;
+    &--left {
+      flex: 1;
+    }
+
+    &--right {
+      flex: 1;
+      padding: 0 3rem;
+
+      .time-info {
+        margin-top: 0.6rem;
+      }
+    }
+  }
+}
