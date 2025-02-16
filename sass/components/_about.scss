@@ -1,0 +1,104 @@
+.about {
+  padding: 15rem 0;
+  &__head {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__slider {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 10rem;
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  &__card {
+    flex-shrink: 0;
+    position: relative;
+    width: 78rem;
+    height: 55rem;
+    &-img img {
+      height: 42rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.8rem;
+    }
+    &-review {
+      position: absolute;
+      margin: 0 9%;
+      padding: 3.2rem;
+      top: 50%;
+
+      background-color: $color-white;
+      border-radius: 1.6rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+      &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-stars {
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-right: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & input[type="radio"]:checked + .about__dot {
+      background-color: $color-grey-3;
+    }
+
+    #dot1:checked ~ .about__slider {
+      padding-left: 0;
+    }
+
+    #dot2:checked ~ .about__slider {
+      background-color: black;
+    }
+
+    #dot3:checked ~ .about__slider {
+      transform: translateX(-200%);
+    }
+  }
+
+  &__dot {
+    display: inline-block;
+    cursor: pointer;
+
+    width: 1.2rem;
+    height: 1.2rem;
+
+    background-color: $color-grey-1;
+    border-radius: 50%;
+
+    transition: background-color 0.3s;
+  }
+}
