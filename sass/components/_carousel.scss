@@ -1,18 +1,18 @@
 .carousel-container {
   position: relative;
-  margin-top: 100%;
+  margin-top: 92%;
 }
 
 .carousel {
   margin: 0;
-  padding: 0;
+  padding-left: 5rem;
 
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
 
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+ // scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
   transition: all 0.3s ease-in-out;

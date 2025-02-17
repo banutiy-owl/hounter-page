@@ -3,6 +3,28 @@
   gap: 3.2rem;
   padding: 0 10rem;
 
+  /*
+  &-gradient{
+    position: absolute;
+    left: 23rem;
+    height: 15rem;
+    width: 17rem;
+    background: radial-gradient(
+    ellipse at 50% 0%, 
+    rgba(185, 255, 130, 0.2) 0%, 
+    rgba(185, 255, 130, 0) 70%
+  ),
+  radial-gradient(
+    ellipse at 90% 00%, 
+    rgba(130, 187, 255, 0.2) 0%, 
+    rgba(130, 187, 255, 0) 70%
+  );
+  filter: blur(50px);
+
+  }
+  ???????????????????
+  */
+
   &__left {
     display: flex;
     flex-direction: column;

@@ -259,16 +259,15 @@ body {
 
 .carousel-container {
   position: relative;
-  margin-top: 100%; }
+  margin-top: 92%; }
 
 .carousel {
   margin: 0;
-  padding: 0;
+  padding-left: 5rem;
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   transition: all 0.3s ease-in-out; }
   .carousel::-webkit-scrollbar {
@@ -352,8 +351,6 @@ body {
     flex-direction: column;
     width: 47%;
     height: 110vh;
-    min-height: 100vh;
-    padding-left: 4.8rem;
     background-image: url(../../imgs/hero.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -409,7 +406,7 @@ body {
     width: 0; }
     .featured-house__head-types input[type="radio"]:checked + label {
       background-color: #D1FAE5;
-      border: none;
+      border: 1px solid #D1FAE5;
       color: #10B981; }
   .featured-house__head-types label {
     display: inline-block;
@@ -630,7 +627,17 @@ body {
     transition: background-color 0.3s; }
 
 .findout {
-  padding: 0 10rem; }
+  padding: 0 10rem;
+  position: relative; }
+  .findout-gradient {
+    background: radial-gradient(ellipse at 10% 10%, rgba(130, 255, 232, 0.7) 0%, transparent 60%), radial-gradient(ellipse at 20% 90%, rgba(200, 255, 130, 0.5) 0%, rgba(255, 152, 130, 0) 70%);
+    filter: blur(50px);
+    position: absolute;
+    left: -3rem;
+    top: -6rem;
+    height: 70rem;
+    width: 53rem;
+    z-index: -10; }
   .findout__head {
     text-align: center; }
     .findout__head button {
@@ -769,7 +776,28 @@ body {
 .joinform {
   display: flex;
   gap: 3.2rem;
-  padding: 0 10rem; }
+  padding: 0 10rem;
+  /*
+  &-gradient{
+    position: absolute;
+    left: 23rem;
+    height: 15rem;
+    width: 17rem;
+    background: radial-gradient(
+    ellipse at 50% 0%, 
+    rgba(185, 255, 130, 0.2) 0%, 
+    rgba(185, 255, 130, 0) 70%
+  ),
+  radial-gradient(
+    ellipse at 90% 00%, 
+    rgba(130, 187, 255, 0.2) 0%, 
+    rgba(130, 187, 255, 0) 70%
+  );
+  filter: blur(50px);
+
+  }
+  ???????????????????
+  */ }
   .joinform__left {
     display: flex;
     flex-direction: column;
@@ -946,22 +974,19 @@ body {
   .navigation__item:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px); }
-  .navigation__item.navigation__item--property {
-    border-radius: 0;
+  .navigation__item--property {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative; }
-    .navigation__item.navigation__item--property-container {
-      border-radius: 10rem; }
-    .navigation__item.navigation__item--property:hover .dropdown-content {
+    .navigation__item--property:hover .dropdown-content {
       display: block; }
-  .navigation__item.navigation__item--signup {
+  .navigation__item--signup {
     background-color: #D1FAE5;
     border: 1px solid #10B981;
     color: #10B981;
     padding: 1.2rem 2.4rem; }
-    .navigation__item.navigation__item--signup:hover {
+    .navigation__item--signup:hover {
       background-color: #10B981;
       color: #fff; }
   .navigation__item svg {
@@ -990,7 +1015,7 @@ body {
   z-index: 1; }
 
 .dropdown-item {
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.4rem;
   font-size: 1.4rem;
   color: #fff;
   cursor: pointer;
@@ -1026,10 +1051,22 @@ body {
 .footer {
   padding: 15rem 10rem;
   display: flex;
-  gap: 3.2rem; }
+  gap: 3.2rem;
+  position: relative; }
+  .footer-gradient {
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+    width: 700px;
+    height: 500px;
+    z-index: -1000;
+    background: radial-gradient(ellipse at 50% 100%, rgba(185, 255, 130, 0.8) 0%, rgba(130, 187, 255, 0) 70%), radial-gradient(ellipse at 100% 60%, rgba(130, 187, 255, 0.8) 0%, rgba(130, 187, 255, 0) 70%);
+    filter: blur(50px);
+    pointer-events: none; }
   .footer__left {
     width: 40%;
-    padding-right: 12rem; }
+    padding-right: 12rem;
+    position: relative; }
     .footer__left .social-icons {
       display: flex;
       gap: 2.4rem; }
@@ -1053,6 +1090,6 @@ body {
       gap: 1.6rem; }
     .footer__part-link {
       cursor: pointer;
-      transition: all .2s ease-out; }
+      transition: all 0.2s ease-out; }
       .footer__part-link:hover {
         color: #10B981; }

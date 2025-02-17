@@ -2,10 +2,34 @@
   padding: 15rem 10rem;
   display: flex;
   gap: 3.2rem;
+  position: relative;
+
+  &-gradient {
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+    width: 700px;
+    height: 500px;
+    z-index: -1000;
+    background: radial-gradient(
+        ellipse at 50% 100%,
+        rgba(185, 255, 130, 0.8) 0%,
+        rgba(130, 187, 255, 0) 70%
+      ),
+      radial-gradient(
+        ellipse at 100% 60%,
+        rgba(130, 187, 255, 0.8) 0%,
+        rgba(130, 187, 255, 0) 70%
+      );
+
+    filter: blur(50px);
+    pointer-events: none;
+  }
 
   &__left {
     width: 40%;
     padding-right: 12rem;
+    position: relative;
     .social-icons {
       display: flex;
       gap: 2.4rem;
@@ -25,30 +49,30 @@
     gap: 3.2rem;
   }
 
-  &__part{
+  &__part {
     width: 17rem;
     height: 19rem;
-    h4{
-        padding-bottom: 2.4rem;
+    h4 {
+      padding-bottom: 2.4rem;
     }
 
-    &-contact{
-        width: auto;
+    &-contact {
+      width: auto;
     }
 
-    &-links{
-        display: flex;
-        flex-direction: column;
-        gap: 1.6rem;
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
     }
 
-    &-link{
-        cursor: pointer;
-        transition: all .2s ease-out;
+    &-link {
+      cursor: pointer;
+      transition: all 0.2s ease-out;
 
-        &:hover{
-            color: $color-primary;
-        }
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
 }

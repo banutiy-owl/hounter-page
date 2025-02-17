@@ -1,5 +1,29 @@
 .findout {
   padding: 0 10rem;
+  position: relative;
+
+  &-gradient {
+    background: radial-gradient(
+        ellipse at 10% 10%,
+        rgba(130, 255, 232, 0.7) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at 20% 90%,
+        rgba(200, 255, 130, 0.5) 0%,
+        rgba(255, 152, 130, 0) 70%
+      );
+    filter: blur(50px);
+
+    position: absolute;
+    left: -3rem;
+    top: -6rem;
+
+    height: 70rem;
+    width: 53rem;
+    z-index: -10;
+  }
+
   &__head {
     text-align: center;
 

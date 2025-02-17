@@ -8,7 +8,7 @@
 
     &:checked + label {
       background-color: $color-primary-light;
-      border: none;
+      border: 1px solid $color-primary-light;
       color: $color-primary;
     }
   }
@@ -26,13 +26,13 @@
       background-color: $color-primary-light;
     }
 
-    .radio-house-option{
-        display: flex;
-        align-items: center;
+    .radio-house-option {
+      display: flex;
+      align-items: center;
 
-        svg{
-            margin-right: 1rem;
-        }
+      svg {
+        margin-right: 1rem;
+      }
     }
   }
 }

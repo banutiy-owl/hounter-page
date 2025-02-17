@@ -7,8 +7,8 @@
 
 .navigation__nav {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
 }
 
@@ -30,28 +30,23 @@
     transform: translateY(-2px);
   }
 
-  &.navigation__item--property {
-    border-radius: 0;
+  &--property {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-
-    &-container{
-      border-radius: 10rem;
-    }
 
     &:hover .dropdown-content {
       display: block;
     }
   }
 
-  &.navigation__item--signup {
+  &--signup {
     background-color: $color-primary-light;
     border: 1px solid $color-primary;
     color: $color-primary;
     padding: 1.2rem 2.4rem;
-    
+
     &:hover {
       background-color: $color-primary;
       color: $color-white;
@@ -60,7 +55,7 @@
 
   svg {
     margin-left: 0.5rem;
-    fill: currentColor; 
+    fill: currentColor;
     width: 1rem;
     height: 1rem;
     transform: rotate(90deg);
@@ -68,13 +63,11 @@
 }
 
 .navigation__item-wrapper {
-  height: 100%; 
- 
+  height: 100%;
 }
 
 .navigation__item-wrapper .navigation__item--signup {
   margin-top: 0;
-  
 }
 
 .dropdown-content {
@@ -91,7 +84,7 @@
 }
 
 .dropdown-item {
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.4rem;
   font-size: 1.4rem;
   color: $color-white;
   cursor: pointer;
@@ -104,39 +97,36 @@
   background-color: rgba($color-white, 0.2);
 }
 
-
-  
-  @media (max-width: 768px) {
-    .navigation {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    .navigation__item {
-      width: 100%;
-      padding: 1rem;
-    }
-
-    .header {
-        flex-direction: column;
-        text-align: center;
-        background-color: rgba($color-white, 0.8);
-      }
-    
-      .navigation {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-    
-      .navigation__item {
-        width: 100%;
-        padding: 1rem;
-        text-align: center;
-      }
-    
-      .hero {
-        background-size: 100% 100%;
-      }
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  
+
+  .navigation__item {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba($color-white, 0.8);
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .navigation__item {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero {
+    background-size: 100% 100%;
+  }
+}
