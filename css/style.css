@@ -1022,3 +1022,37 @@ body {
     text-align: center; }
   .hero {
     background-size: 100% 100%; } }
+
+.footer {
+  padding: 15rem 10rem;
+  display: flex;
+  gap: 3.2rem; }
+  .footer__left {
+    width: 40%;
+    padding-right: 12rem; }
+    .footer__left .social-icons {
+      display: flex;
+      gap: 2.4rem; }
+    .footer__left p {
+      margin: 1.2rem 0 2.4rem; }
+  .footer__right {
+    width: 57%; }
+  .footer__parts {
+    display: flex;
+    gap: 3.2rem; }
+  .footer__part {
+    width: 17rem;
+    height: 19rem; }
+    .footer__part h4 {
+      padding-bottom: 2.4rem; }
+    .footer__part-contact {
+      width: auto; }
+    .footer__part-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem; }
+    .footer__part-link {
+      cursor: pointer;
+      transition: all .2s ease-out; }
+      .footer__part-link:hover {
+        color: #10B981; }

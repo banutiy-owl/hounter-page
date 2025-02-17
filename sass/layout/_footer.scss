@@ -1,0 +1,54 @@
+.footer {
+  padding: 15rem 10rem;
+  display: flex;
+  gap: 3.2rem;
+
+  &__left {
+    width: 40%;
+    padding-right: 12rem;
+    .social-icons {
+      display: flex;
+      gap: 2.4rem;
+    }
+
+    p {
+      margin: 1.2rem 0 2.4rem;
+    }
+  }
+
+  &__right {
+    width: 57%;
+  }
+
+  &__parts {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  &__part{
+    width: 17rem;
+    height: 19rem;
+    h4{
+        padding-bottom: 2.4rem;
+    }
+
+    &-contact{
+        width: auto;
+    }
+
+    &-links{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &-link{
+        cursor: pointer;
+        transition: all .2s ease-out;
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+  }
+}
