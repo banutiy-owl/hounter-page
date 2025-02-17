@@ -31,10 +31,15 @@
   }
 
   &.navigation__item--property {
+    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+
+    &-container{
+      border-radius: 10rem;
+    }
 
     &:hover .dropdown-content {
       display: block;
@@ -73,10 +78,11 @@
 }
 
 .dropdown-content {
+  transform: translateY(-2px);
   display: none;
   position: absolute;
   top: 110%;
-  left: 0;
+  left: 1%;
   background-color: rgba($color-white, 0.1);
   border: 1px solid $color-white;
   border-radius: 1rem;

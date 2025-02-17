@@ -79,3 +79,26 @@ cards.forEach((card) => {
     mainCard.querySelector(".findout__card-main-avatar").src = ownerPhoto;
   });
 });
+
+
+document.getElementById("dropdown-btn").addEventListener("click", function () {
+  var dropdownContent = document.querySelector(".joinform__form-dropdown-content");
+  dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+});
+
+document.querySelectorAll(".joinform__form-dropdown-option").forEach(function (option) {
+  option.addEventListener("click", function () {
+    var selectedValue = option.textContent;
+    document.getElementById("dropdown-btn").textContent = selectedValue;
+    document.querySelector(".joinform__form-dropdown-content").style.display = "none";
+  });
+});
+
+
+const messageInput = document.getElementById("message");
+const messageCounter = document.getElementById("message-counter");
+
+messageInput.addEventListener("input", function() {
+  const currentLength = messageInput.value.length;
+  messageCounter.textContent = `${currentLength}/500`;
+});

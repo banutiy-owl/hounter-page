@@ -1,0 +1,196 @@
+.joinform {
+  display: flex;
+  gap: 3.2rem;
+  padding: 0 10rem;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    &-text {
+      margin: 2.8rem 0 5.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+
+    hr {
+      background-color: $color-primary;
+      margin: 0 auto;
+      height: 0.2rem;
+      width: 4rem;
+    }
+  }
+
+  &__back {
+    z-index: -10;
+    position: relative;
+    top: -15rem;
+  }
+
+  &__front {
+    margin: 0 auto;
+  }
+
+  &__right {
+    width: 57%;
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    &-dropdown {
+      position: relative;
+
+      &-btn {
+        text-align: left;
+      }
+
+      &-content {
+        display: none;
+        position: absolute;
+
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        width: 100%;
+        margin-top: 0.5rem;
+        border: 1px solid $color-grey-1;
+        background-color: $color-white;
+        border-radius: 1.6rem;
+      }
+
+      &-option {
+        display: block;
+        cursor: pointer;
+        padding: 1.6rem;
+
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+    &-name,
+    &-surname,
+    &-education {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    &-message {
+      display: flex;
+      justify-items: flex-start;
+      justify-content: space-between;
+      position: relative;
+
+      label {
+        padding-top: 1.6rem;
+      }
+    }
+
+    label {
+      width: 8.9rem;
+      padding-left: 2rem;
+    }
+
+    &-name input,
+    &-surname input,
+    &-dropdown-btn,
+    &-message textarea {
+      outline: 0;
+      width: 49.6rem;
+      height: 5.6rem;
+      padding: 1.6rem;
+      border: 1px solid $color-grey-1;
+      background-color: $color-white;
+      border-radius: 2.8rem;
+    }
+
+    &-name input::placeholder,
+    &-surname input::placeholder,
+    &-dropdown-option,
+    &-dropdown-btn {
+      color: $color-grey-2;
+      font-size: 1.4rem;
+      font-weight: 500;
+      font-family: "Lexend", sans-serif;
+    }
+
+    &-message textarea {
+      resize: vertical;
+      height: 14.4rem;
+      position: relative;
+      resize: none;
+      font-family: "Lexend", sans-serif;
+    }
+
+    #message-counter {
+      position: absolute;
+      bottom: 1.6rem;
+      right: 1.6rem;
+      color: $color-grey-2;
+    }
+
+    &-checkbox {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .custom-checkbox {
+      display: flex;
+      width: 78%;
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+
+      .checkbox {
+        width: 5rem;
+        height: 2.4rem;
+        border: 2px solid $color-grey-2;
+        border-radius: 4px;
+        margin-right: 1rem;
+        position: relative;
+        background-color: $color-white;
+        transition: background-color 0.3s, border-color 0.3s;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0.3rem;
+          left: 0.6rem;
+          width: 0.6rem;
+          height: 1.2rem;
+          border: solid $color-white;
+          border-width: 0 3px 3px 0;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+      }
+
+      input:checked + .checkbox {
+        background-color: $color-primary;
+        border-color: $color-primary;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

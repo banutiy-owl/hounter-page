@@ -15,7 +15,7 @@
     transition: background-color 0.6s ease, border-color 0.6s ease,
       color 0.6s ease;
 
-    &__contact {
+    &__contact-now {
       margin-left: 7rem;
       @include button(
         $bg-color: $color-primary,

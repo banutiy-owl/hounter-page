@@ -132,7 +132,7 @@ body {
     width: auto;
     fill: currentColor;
     margin-left: 1rem; }
-  .btn--green__contact {
+  .btn--green__contact-now {
     margin-left: 7rem;
     text-decoration: none;
     border-radius: 10rem;
@@ -149,9 +149,9 @@ body {
     cursor: pointer;
     background-color: #10B981;
     color: #fff; }
-    .btn--green__contact::after {
+    .btn--green__contact-now::after {
       background-color: #10B981; }
-    .btn--green__contact svg {
+    .btn--green__contact-now svg {
       display: block;
       height: 100%;
       width: auto;
@@ -766,6 +766,143 @@ body {
       height: 3.6rem;
       width: 3.6rem; }
 
+.joinform {
+  display: flex;
+  gap: 3.2rem;
+  padding: 0 10rem; }
+  .joinform__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .joinform__left-text {
+      margin: 2.8rem 0 5.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem; }
+    .joinform__left hr {
+      background-color: #10B981;
+      margin: 0 auto;
+      height: 0.2rem;
+      width: 4rem; }
+  .joinform__back {
+    z-index: -10;
+    position: relative;
+    top: -15rem; }
+  .joinform__front {
+    margin: 0 auto; }
+  .joinform__right {
+    width: 57%;
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .joinform__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem; }
+    .joinform__form-dropdown {
+      position: relative; }
+      .joinform__form-dropdown-btn {
+        text-align: left; }
+      .joinform__form-dropdown-content {
+        display: none;
+        position: absolute;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        width: 100%;
+        margin-top: 0.5rem;
+        border: 1px solid #E0E3EB;
+        background-color: #fff;
+        border-radius: 1.6rem; }
+      .joinform__form-dropdown-option {
+        display: block;
+        cursor: pointer;
+        padding: 1.6rem; }
+        .joinform__form-dropdown-option:hover {
+          background-color: #ddd; }
+    .joinform__form-name, .joinform__form-surname, .joinform__form-education {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem; }
+    .joinform__form-message {
+      display: flex;
+      justify-items: flex-start;
+      justify-content: space-between;
+      position: relative; }
+      .joinform__form-message label {
+        padding-top: 1.6rem; }
+    .joinform__form label {
+      width: 8.9rem;
+      padding-left: 2rem; }
+    .joinform__form-name input,
+    .joinform__form-surname input, .joinform__form-dropdown-btn,
+    .joinform__form-message textarea {
+      outline: 0;
+      width: 49.6rem;
+      height: 5.6rem;
+      padding: 1.6rem;
+      border: 1px solid #E0E3EB;
+      background-color: #fff;
+      border-radius: 2.8rem; }
+    .joinform__form-name input::placeholder,
+    .joinform__form-surname input::placeholder, .joinform__form-dropdown-option, .joinform__form-dropdown-btn {
+      color: #888B97;
+      font-size: 1.4rem;
+      font-weight: 500;
+      font-family: "Lexend", sans-serif; }
+    .joinform__form-message textarea {
+      resize: vertical;
+      height: 14.4rem;
+      position: relative;
+      resize: none;
+      font-family: "Lexend", sans-serif; }
+    .joinform__form #message-counter {
+      position: absolute;
+      bottom: 1.6rem;
+      right: 1.6rem;
+      color: #888B97; }
+    .joinform__form-checkbox {
+      display: flex;
+      justify-content: flex-end; }
+    .joinform__form .custom-checkbox {
+      display: flex;
+      width: 78%;
+      cursor: pointer; }
+      .joinform__form .custom-checkbox input {
+        display: none; }
+      .joinform__form .custom-checkbox .checkbox {
+        width: 5rem;
+        height: 2.4rem;
+        border: 2px solid #888B97;
+        border-radius: 4px;
+        margin-right: 1rem;
+        position: relative;
+        background-color: #fff;
+        transition: background-color 0.3s, border-color 0.3s; }
+        .joinform__form .custom-checkbox .checkbox::after {
+          content: "";
+          position: absolute;
+          top: 0.3rem;
+          left: 0.6rem;
+          width: 0.6rem;
+          height: 1.2rem;
+          border: solid #fff;
+          border-width: 0 3px 3px 0;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.2s; }
+      .joinform__form .custom-checkbox input:checked + .checkbox {
+        background-color: #10B981;
+        border-color: #10B981; }
+        .joinform__form .custom-checkbox input:checked + .checkbox::after {
+          opacity: 1; }
+
 .header {
   position: absolute;
   top: 0;
@@ -810,10 +947,13 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px); }
   .navigation__item.navigation__item--property {
+    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative; }
+    .navigation__item.navigation__item--property-container {
+      border-radius: 10rem; }
     .navigation__item.navigation__item--property:hover .dropdown-content {
       display: block; }
   .navigation__item.navigation__item--signup {
@@ -838,10 +978,11 @@ body {
   margin-top: 0; }
 
 .dropdown-content {
+  transform: translateY(-2px);
   display: none;
   position: absolute;
   top: 110%;
-  left: 0;
+  left: 1%;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #fff;
   border-radius: 1rem;

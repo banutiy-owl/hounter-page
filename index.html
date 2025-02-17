@@ -20,22 +20,24 @@
         <nav class="navigation__nav">
           <div class="navigation__item">About us</div>
           <div class="navigation__item">Article</div>
-          <div class="navigation__item navigation__item--property">
-            Property
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.1353 5.0018C9.87047 5.00135 9.61386 5.08254 9.40997 5.2313C9.29522 5.31506 9.20036 5.41793 9.13083 5.53402C9.0613 5.65011 9.01847 5.77714 9.00479 5.90782C8.9911 6.03851 9.00683 6.17029 9.05108 6.29562C9.09533 6.42094 9.16722 6.53735 9.26265 6.63818L14.3397 11.9863L9.44397 17.3444C9.34983 17.4465 9.27953 17.5639 9.23711 17.69C9.19469 17.8161 9.18099 17.9482 9.19679 18.079C9.21258 18.2097 9.25757 18.3364 9.32916 18.4518C9.40075 18.5672 9.49754 18.669 9.61396 18.7513C9.73121 18.8421 9.86853 18.9107 10.0173 18.9526C10.166 18.9945 10.323 19.0088 10.4784 18.9948C10.6337 18.9807 10.7841 18.9385 10.9201 18.8709C11.0561 18.8032 11.1747 18.7116 11.2685 18.6016L16.7422 12.6149C16.9089 12.4364 17 12.2124 17 11.9813C17 11.7502 16.9089 11.5263 16.7422 11.3477L11.0759 5.36101C10.9622 5.24026 10.8178 5.14481 10.6543 5.0824C10.4909 5.01999 10.3131 4.99238 10.1353 5.0018Z"
-              />
-            </svg>
-            <div class="dropdown-content">
-              <div class="dropdown-item">Property 1</div>
-              <div class="dropdown-item">Property 2</div>
-              <div class="dropdown-item">Property 3</div>
+          <div class="navigation__item--property">
+            <div class="navigation__item navigation__item--property-container">
+              Property
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.1353 5.0018C9.87047 5.00135 9.61386 5.08254 9.40997 5.2313C9.29522 5.31506 9.20036 5.41793 9.13083 5.53402C9.0613 5.65011 9.01847 5.77714 9.00479 5.90782C8.9911 6.03851 9.00683 6.17029 9.05108 6.29562C9.09533 6.42094 9.16722 6.53735 9.26265 6.63818L14.3397 11.9863L9.44397 17.3444C9.34983 17.4465 9.27953 17.5639 9.23711 17.69C9.19469 17.8161 9.18099 17.9482 9.19679 18.079C9.21258 18.2097 9.25757 18.3364 9.32916 18.4518C9.40075 18.5672 9.49754 18.669 9.61396 18.7513C9.73121 18.8421 9.86853 18.9107 10.0173 18.9526C10.166 18.9945 10.323 19.0088 10.4784 18.9948C10.6337 18.9807 10.7841 18.9385 10.9201 18.8709C11.0561 18.8032 11.1747 18.7116 11.2685 18.6016L16.7422 12.6149C16.9089 12.4364 17 12.2124 17 11.9813C17 11.7502 16.9089 11.5263 16.7422 11.3477L11.0759 5.36101C10.9622 5.24026 10.8178 5.14481 10.6543 5.0824C10.4909 5.01999 10.3131 4.99238 10.1353 5.0018Z"
+                />
+              </svg>
+              <div class="dropdown-content">
+                <div class="dropdown-item">Property 1</div>
+                <div class="dropdown-item">Property 2</div>
+                <div class="dropdown-item">Property 3</div>
+              </div>
             </div>
           </div>
           <div class="navigation__item-wrapper">
@@ -1185,6 +1187,119 @@
               class="subscribe__picture subscribe__picture-circle"
             />
           </div>
+        </div>
+      </section>
+      <section class="joinform">
+        <div class="joinform__left">
+          <h3 class="heading heading--3">Would you like to join?</h3>
+          <div class="joinform__left-text">
+            <p class="paragraph">
+              Quickly get three quotes from these local that people love in
+              online reviews.
+            </p>
+            <hr />
+            <p class="paragraph">Pick the whose estimate suits you best.</p>
+            <hr />
+            <p class="paragraph">
+              We then make sure the work i done to your complete satisfaction.
+            </p>
+          </div>
+          <img src="imgs/tab.svg" class="joinform__front" alt="" />
+          <img src="imgs/background.svg" class="joinform__back" alt="" />
+        </div>
+        <div class="joinform__right">
+          <form class="joinform__form">
+            <div class="joinform__form-name">
+              <label class="label label--default label--medium" for="name"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+
+            <div class="joinform__form-surname">
+              <label class="label label--default label--medium" for="surname"
+                >Surname</label
+              >
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Your Surname"
+                required
+              />
+            </div>
+
+            <div class="joinform__form-education">
+              <label class="label label--default label--medium" for="education"
+                >Education</label
+              >
+              <div class="joinform__form-dropdown">
+                <button
+                  type="button"
+                  class="joinform__form-dropdown-btn"
+                  id="dropdown-btn"
+                >
+                  Select Education
+                </button>
+                <div class="joinform__form-dropdown-content">
+                  <div
+                    class="joinform__form-dropdown-option"
+                    data-value="highschool"
+                  >
+                    High School
+                  </div>
+                  <div
+                    class="joinform__form-dropdown-option"
+                    data-value="bachelor"
+                  >
+                    Bachelor's Degree
+                  </div>
+                  <div
+                    class="joinform__form-dropdown-option"
+                    data-value="master"
+                  >
+                    Master's Degree
+                  </div>
+                  <div
+                    class="joinform__form-dropdown-option"
+                    data-value="doctorate"
+                  >
+                    Doctorate
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="joinform__form-message">
+              <label class="label label--default label--medium" for="message"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                maxlength="500"
+                placeholder="Message"
+                required
+              ></textarea>
+              <div class="label label--small" id="message-counter">0/500</div>
+            </div>
+
+            <div class="joinform__form-checkbox">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="consent" required />
+                <span class="checkbox"></span>
+                I give consent to the processing of my personal data given in
+                the contact form above under the terms and conditions of Grid
+                Dynamics Privacy Policy.
+              </label>
+            </div>
+          </form>
         </div>
       </section>
     </main>
