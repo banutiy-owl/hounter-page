@@ -1,0 +1,115 @@
+.findout {
+  padding: 0 10rem;
+  position: relative;
+
+  &-gradient {
+    background: radial-gradient(
+        ellipse at 10% 10%,
+        rgba(130, 255, 232, 0.7) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at 20% 90%,
+        rgba(200, 255, 130, 0.5) 0%,
+        rgba(255, 152, 130, 0) 70%
+      );
+    filter: blur(50px);
+
+    position: absolute;
+    left: -3rem;
+    top: -6rem;
+
+    height: 70rem;
+    width: 53rem;
+    z-index: -10;
+  }
+
+  &__head {
+    text-align: center;
+
+    button {
+      margin: 2.4rem auto 3rem;
+    }
+
+    h2 {
+      margin-top: 0.6rem;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  &__card {
+    display: flex;
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+
+    &-image {
+      width: 20rem;
+      object-fit: cover;
+      margin-right: 3.2rem;
+      border-radius: 1.6rem;
+    }
+
+    &-owner-info {
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 100%;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 1.6rem;
+      }
+    }
+
+    &-title {
+      margin-top: 1.2rem;
+    }
+
+    &-main {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      &-image {
+        height: 28rem;
+        width: 58rem;
+        object-fit: cover;
+
+        border-radius: 1.6rem;
+        margin-bottom: 1.4rem;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+    }
+  }
+  .time-info {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 1.6rem;
+  }
+
+  &__container {
+    display: flex;
+    &--left {
+      flex: 1;
+    }
+
+    &--right {
+      flex: 1;
+      padding: 0 3rem;
+
+      .time-info {
+        margin-top: 0.6rem;
+      }
+    }
+  }
+}

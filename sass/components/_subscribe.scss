@@ -1,0 +1,114 @@
+.subscribe {
+  margin: 15rem 10rem;
+  position: relative;
+
+  &__block {
+    text-align: center;
+    border-radius: 3.2rem;
+    padding: 5rem 0;
+    background-image: url("../../imgs/back.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &__form {
+    margin: 3rem auto;
+    border: 1px solid $color-grey-1;
+    border-radius: 5em;
+    background-color: $color-white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.6rem;
+    width: 50rem;
+    padding: 0 0.3rem;
+    &-input {
+      border: 0;
+      outline: 0;
+      border-radius: 5em;
+      width: 65%;
+      padding: 1rem;
+    }
+    &-svg {
+      margin-left: 2rem;
+      margin-right: 0.7rem;
+      height: 100%;
+      fill: $color-info;
+      & path {
+        fill: inherit;
+      }
+    }
+
+    input:focus::placeholder {
+      color: $color-grey-1;
+    }
+  }
+
+  &__pictures {
+    #sub-1 {
+      height: 8.1rem;
+      width: 8.1rem;
+
+      top: 5rem;
+      left: 5rem;
+    }
+
+    #sub-2 {
+      height: 5.4rem;
+      width: 5.4rem;
+
+      top: 20rem;
+      left: 19rem;
+    }
+
+    #sub-3{
+        top:19rem;
+        left: 7rem;
+    }
+
+    #sub-4{
+        top:8rem;
+        left: 21rem;
+    }
+
+    #sub-5 {
+      height: 7rem;
+      width: 7rem;
+
+      top: 4rem;
+      right: 21rem;
+    }
+
+    #sub-6 {
+      height: 5.5rem;
+      width: 5.5rem;
+
+      bottom: 5rem;
+      right: 7rem;
+    }
+
+    #sub-7{
+        top: 14rem;
+        right: 21rem;
+    }
+
+    #sub-8{
+        top: 10rem;
+        right: 7rem;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    border: 2px solid $color-white;
+    &-square {
+      border-radius: 2.4rem;
+    }
+
+    &-circle {
+      border-radius: 100%;
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+  }
+}

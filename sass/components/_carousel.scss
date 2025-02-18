@@ -1,18 +1,18 @@
 .carousel-container {
   position: relative;
-  margin-top: 100%;
+  margin-top: 92%;
 }
 
 .carousel {
   margin: 0;
-  padding: 0;
+  padding-left: 5rem;
 
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
 
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+ // scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
   transition: all 0.3s ease-in-out;
@@ -75,20 +75,13 @@
     justify-content: center;
     flex-grow: 1;
 
-    .item-bold {
-      color: $color-black;
-    }
-
-    .item-light {
-      color: $color-grey-2;
-    }
+    
   }
 
-  &-first {
-    transition: 0.5s all;
-    &:hover .carousel-item__content {
-      padding-left: 17rem;
-    }
+  &-first &__content {
+    padding-left: 12rem;
+    transition: padding-left 0.5s ease-in-out 0.01s;
+  }
 
   &-second &__content {
     padding-left: 7rem;
@@ -99,27 +92,25 @@
 
   &-first {
     position: relative;
-  
+
     &:hover .carousel-item__content {
       padding-left: 16rem;
-      transition: padding-left 0.5s ease-in-out -.1s;
+      transition: padding-left 0.5s ease-in-out -0.1s;
     }
-  
+
     &:hover .carousel-item__image:nth-child(1) {
       transform: translateX(0);
       transition: transform 0.5s ease-out;
     }
-  
+
     &:hover .carousel-item__image:nth-child(2) {
       transform: translateX(20%);
       transition: transform 0.5s ease-out;
     }
-  
+
     &:hover .carousel-item__image:nth-child(3) {
       transform: translateX(40%);
       transition: transform 0.5s ease-out;
     }
   }
-  
-}
 }

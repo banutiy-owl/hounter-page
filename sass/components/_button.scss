@@ -12,20 +12,35 @@
     border: 1px solid $color-primary;
     border-radius: 5rem;
     color: $color-white;
-    transition: background-color 0.6s ease, border-color 0.6s ease, color 0.6s ease;
+    transition: background-color 0.6s ease, border-color 0.6s ease,
+      color 0.6s ease;
 
-    &__contact-now{
+    &__contact-now {
       margin-left: 7rem;
       @include button(
-      $bg-color: $color-primary,
-      $text-color: $color-white,
-      $height: 4.8rem,
-      $width: 17rem
-    );
+        $bg-color: $color-primary,
+        $text-color: $color-white,
+        $height: 4.8rem,
+        $width: 17rem
+      );
+    }
+
+    &__subscribe {
+      @include button(
+        $bg-color: $color-primary,
+        $text-color: $color-white,
+        $height: 4.8rem,
+        $width: 17rem
+      );
     }
 
     &:hover {
-      background: linear-gradient(45deg, $color-primary-light, $color-primary, $color-primary-dark);
+      background: linear-gradient(
+        45deg,
+        $color-primary-light,
+        $color-primary,
+        $color-primary-dark
+      );
       background-size: 400% 400%;
       color: $color-black;
       border-color: $color-primary-dark;
