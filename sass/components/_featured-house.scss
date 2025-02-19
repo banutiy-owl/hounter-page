@@ -23,6 +23,11 @@
       position: relative;
       flex-shrink: 0;
       width: 37.6rem;
+      display: none;
+
+      &.visible{
+        display:block;
+      }
 
       h4 {
         color: $color-grey-3;

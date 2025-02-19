@@ -1,41 +1,175 @@
-/*const featuredHouseListCards = document.querySelector('.featured-house__list');
+//------start of featured house section
+const featuredHouseSlider = document.querySelector(".featured-house__list");
+const arrowLeft = document.querySelector("#arrow-left");
+const arrowRight = document.querySelector("#arrow-right");
 
-  featuredHouseListCards.addEventListener('scroll', () => {
-    if (featuredHouseListCards.scrollLeft > 0) {
-      featuredHouseListCards.style.marginLeft = '0';
-    } else {
-      featuredHouseListCards.style.marginLeft = '10rem'; 
-    }
+const scrollStep = 300;
+
+arrowLeft.addEventListener("click", () => {
+  featuredHouseSlider.scrollBy({
+    left: -scrollStep,
+    behavior: "smooth",
   });
-
-const carousel = document.querySelector('.carousel');
-
-carousel.addEventListener('scroll', () => {
-  if (carousel.scrollLeft > 0) {
-    carousel.style.marginLeft = '-4.8rem';
-  } else {
-    carousel.style.marginLeft = '0'; 
-  }
 });
 
-*/
-const radioButtons = document.querySelectorAll('input[name="slider"]');
-const slider = document.querySelector(".about__cards");
+arrowRight.addEventListener("click", () => {
+  featuredHouseSlider.scrollBy({
+    left: scrollStep,
+    behavior: "smooth",
+  });
+});
 
-radioButtons.forEach((radio, index) => {
-  radio.addEventListener("change", () => {
-    if (radio.checked) {
-      slider.style.transition = "transform 0.5s ease-in-out";
-      if (index === 0) {
-        slider.style.transform = "translateX(0)";
-      } else if (index === 1) {
-        slider.style.transform = "translateX(-25%)";
-      } else if (index === 2) {
-        slider.style.transform = "translateX(-57%)";
+const featuredHouseRadioButtons = document.querySelectorAll(
+  'input[name="radioTypeHouses"]'
+);
+const featuredHouseCards = document.querySelectorAll(
+  ".featured-house__list-card"
+);
+
+function filterFeaturedHouseCardsByType(selectedType) {
+  featuredHouseCards.forEach((featuredHouseCard) => {
+    const featuredHouseCardType = featuredHouseCard.getAttribute("data-type");
+    if (featuredHouseCardType === selectedType || selectedType === "all") {
+      featuredHouseCard.classList.add("visible");
+    } else {
+      featuredHouseCard.classList.remove("visible");
+    }
+  });
+}
+
+featuredHouseRadioButtons.forEach((featuredHouseRadio) => {
+  featuredHouseRadio.addEventListener("change", function () {
+    const selectedType = this.value;
+    filterFeaturedHouseCardsByType(selectedType);
+  });
+});
+
+filterFeaturedHouseCardsByType(
+  document.querySelector('input[name="radioTypeHouses"]:checked').value
+);
+
+//------end of featured house section
+
+//------start of tour section
+
+document
+  .querySelector(".tour-main-img-video")
+  .addEventListener("click", function () {
+    const video = document.querySelector(".main-video");
+    video.style.display = "block";
+    video.classList.add("main-video-checked");
+    video.pause();
+    video.currentTime = 0;
+    video.play();
+    document.querySelector(".close-button").style.display = "block";
+  });
+
+document.querySelector(".close-button").addEventListener("click", function () {
+  const video = document.querySelector(".main-video");
+  video.pause();
+  video.currentTime = 0;
+  video.style.display = "none";
+  document.querySelector(".close-button").style.display = "none";
+});
+
+//------end of tour section
+
+//------start of about section
+const aboutDots = document.querySelectorAll('.about__dots input[type="radio"]');
+const aboutSlider = document.querySelector(".about__slider");
+const aboutCards = document.querySelectorAll(".about__card");
+const aboutDotLabels = document.querySelectorAll(".about__dot");
+
+const cardGap = 32;
+
+aboutDots.forEach((dot, index) => {
+  dot.addEventListener("change", () => {
+    const cardWidth = aboutCards[index].offsetWidth;
+    const offset = index * (cardWidth + cardGap);
+
+    aboutSlider.scrollLeft = offset;
+    aboutDotLabels.forEach((dotLabel) => dotLabel.classList.remove("active"));
+    aboutDotLabels[index].classList.add("active");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutSlider = document.querySelector(".about__slider");
+  const aboutCards = document.querySelectorAll(".about__card");
+  const aboutDotLabels = document.querySelectorAll(".about__dot");
+
+  function updateDotsOnScroll() {
+    const sliderWidth = aboutSlider.offsetWidth;
+    const scrollLeft = aboutSlider.scrollLeft;
+
+    for (let i = 0; i < aboutCards.length; i++) {
+      const card = aboutCards[i];
+      const cardOffsetLeft = card.offsetLeft;
+      const cardWidth = card.offsetWidth;
+
+      if (
+        scrollLeft + sliderWidth >= cardOffsetLeft + cardWidth &&
+        scrollLeft <= cardOffsetLeft
+      ) {
+        aboutDotLabels.forEach((dotLabel) =>
+          dotLabel.classList.remove("active")
+        );
+        aboutDotLabels[i].classList.add("active");
+        break;
       }
     }
-  });
+  }
+
+  aboutSlider.addEventListener("scroll", updateDotsOnScroll);
+
+  updateDotsOnScroll();
 });
+
+let isDragging = false;
+let startPosition = 0;
+let scrollPosition = 0;
+
+aboutSlider.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startPosition = e.clientX;
+  scrollPosition = aboutSlider.scrollLeft;
+  aboutSlider.style.cursor = "grabbing";
+});
+
+aboutSlider.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  startPosition = e.touches[0].clientX;
+  scrollPosition = aboutSlider.scrollLeft;
+  aboutSlider.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  const diff = e.clientX - startPosition;
+  aboutSlider.scrollLeft = scrollPosition - diff;
+});
+
+document.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+
+  const diff = e.touches[0].clientX - startPosition;
+  aboutSlider.scrollLeft = scrollPosition - diff;
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  aboutSlider.style.cursor = "grab";
+});
+
+document.addEventListener("touchend", () => {
+  isDragging = false;
+  aboutSlider.style.cursor = "grab";
+});
+
+//------end of about section
+
+//------start of findout section
 
 document
   .getElementById("more-articles-button")
@@ -44,24 +178,22 @@ document
       ".findout__cards .findout__card:nth-child(n+4)"
     );
 
-    hiddenCards.forEach((card) => {
-      if (card.style.display === "none" || card.style.display === "") {
-        card.style.display = "flex";
-      } else {
-        card.style.display = "none";
-      }
-    });
-
     if (this.textContent === "More articles") {
       this.textContent = "Less articles";
+      hiddenCards.forEach((card) => {
+        card.style.display = "flex";
+      });
     } else {
       this.textContent = "More articles";
+      hiddenCards.forEach((card) => {
+        card.style.display = "none";
+      });
     }
   });
 
-const cards = document.querySelectorAll(".findout__card");
+const findoutCards = document.querySelectorAll(".findout__card");
 
-cards.forEach((card) => {
+findoutCards.forEach((card) => {
   card.addEventListener("click", function () {
     const title = card.querySelector(".findout__card-title").textContent;
     const ownerName = card.querySelector(
@@ -80,25 +212,75 @@ cards.forEach((card) => {
   });
 });
 
+//------end of findout section
+
+//------start of subscribe section
+
+const form = document.querySelector(".subscribe__form");
+const emailInput = document.querySelector("#email");
+const submitButton = document.querySelector(".btn--green__subscribe");
+const errorMessage = document.querySelector(".error-message");
+
+form.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    emailInput.blur();
+  }
+});
+
+emailInput.addEventListener("blur", function () {
+  const emailValue = emailInput.value.trim();
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!emailRegex.test(emailValue)) {
+    form.style.border = "2px solid red";
+    errorMessage.style.display = "block";
+  } else {
+    form.style.border = "none";
+    errorMessage.style.display = "none";
+  }
+});
+
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  const emailValue = emailInput.value.trim();
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (emailRegex.test(emailValue)) {
+    alert("Welcome to Hounter!");
+    emailInput.value = "";
+  }
+});
+
+//-----end of subscribe section
+
+//------start of joinform section
 
 document.getElementById("dropdown-btn").addEventListener("click", function () {
-  var dropdownContent = document.querySelector(".joinform__form-dropdown-content");
-  dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+  var dropdownContent = document.querySelector(
+    ".joinform__form-dropdown-content"
+  );
+  dropdownContent.style.display =
+    dropdownContent.style.display === "block" ? "none" : "block";
 });
 
-document.querySelectorAll(".joinform__form-dropdown-option").forEach(function (option) {
-  option.addEventListener("click", function () {
-    var selectedValue = option.textContent;
-    document.getElementById("dropdown-btn").textContent = selectedValue;
-    document.querySelector(".joinform__form-dropdown-content").style.display = "none";
+document
+  .querySelectorAll(".joinform__form-dropdown-option")
+  .forEach(function (option) {
+    option.addEventListener("click", function () {
+      var selectedValue = option.textContent;
+      document.getElementById("dropdown-btn").textContent = selectedValue;
+      document.querySelector(".joinform__form-dropdown-content").style.display =
+        "none";
+    });
   });
-});
-
 
 const messageInput = document.getElementById("message");
 const messageCounter = document.getElementById("message-counter");
 
-messageInput.addEventListener("input", function() {
+messageInput.addEventListener("input", function () {
   const currentLength = messageInput.value.length;
   messageCounter.textContent = `${currentLength}/500`;
 });
+
+//------end of joinform section

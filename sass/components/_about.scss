@@ -13,6 +13,8 @@
     display: flex;
     overflow-x: auto;
     padding: 0 10rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 10rem;
 
     &::-webkit-scrollbar {
       background-color: transparent;
@@ -22,6 +24,7 @@
   &__cards {
     display: flex;
     gap: 3.2rem;
+    scroll-snap-align: start;
   }
 
   &__card {
@@ -72,21 +75,7 @@
       display: none;
     }
 
-    & input[type="radio"]:checked + .about__dot {
-      background-color: $color-grey-3;
-    }
-
-    #dot1:checked ~ .about__slider {
-      padding-left:0;
-    }
-
-    #dot2:checked ~ .about__slider {
-      background-color: black;
-    }
-
-    #dot3:checked ~ .about__slider {
-      transform: translateX(-200%);
-    }
+   
   }
 
   &__dot {
@@ -100,5 +89,9 @@
     border-radius: 50%;
 
     transition: background-color 0.3s;
+    &.active{
+      background-color: $color-grey-3;
+    }
   }
+
 }

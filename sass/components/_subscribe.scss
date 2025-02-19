@@ -2,6 +2,11 @@
   margin: 15rem 10rem;
   position: relative;
 
+  .error-message {
+    color: $color-danger;
+    display: none;
+  }
+
   &__block {
     text-align: center;
     border-radius: 3.2rem;
@@ -23,6 +28,7 @@
     width: 50rem;
     padding: 0 0.3rem;
     &-input {
+      font-size: 1.4rem;
       border: 0;
       outline: 0;
       border-radius: 5em;
