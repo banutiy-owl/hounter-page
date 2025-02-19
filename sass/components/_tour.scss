@@ -2,6 +2,39 @@
   padding: 0 10rem;
   position: relative;
 
+  &-main-img-video {
+    cursor: pointer;
+    svg {
+      position: absolute;
+      left: 24.4rem;
+      top: 19rem;
+      z-index: 4;
+    }
+  }
+  .main-video {
+    display: none;
+
+    &-checked {
+      display: block;
+      height: 41.6rem;
+      width: 43rem;
+      object-fit: cover;
+      z-index: 6;
+      position: absolute;
+      left: 19rem;
+    }
+  }
+
+  &-top-grey {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    height: 41.6rem;
+    width: 42.8rem;
+    margin-left: 5rem;
+
+    z-index: 4;
+  }
+
   &-content {
     display: flex;
     &__left {
@@ -46,10 +79,23 @@
     &__right {
       flex: 1;
       display: flex;
+      position: relative;
+
+      .close-button{
+        display: none;
+        position: absolute;
+        z-index: 11;
+        right: 1rem;
+        top: 1rem;
+
+        cursor: pointer;
+      }
+
       &-imgs {
         position: relative;
         margin-left: auto;
         padding-bottom: 4.3rem;
+
         img {
           object-fit: cover;
         }
@@ -62,11 +108,12 @@
 
         .mid-image {
           position: absolute;
-          right: 22rem;
+          right: 24rem;
           bottom: 0;
           width: 29.6rem;
           height: 16.8rem;
           border-radius: 0.8rem;
+          z-index: 7;
         }
 
         .small-image {
@@ -77,8 +124,13 @@
           bottom: 0;
           border-radius: 0.8rem;
           &-1 {
-            right: 11rem;
+            right: 13rem;
           }
+
+          &-2{
+            right: 2rem;
+          }
+          z-index: 7;
         }
       }
     }
@@ -92,8 +144,8 @@
       ),
       radial-gradient(
         ellipse at 90% 50%,
-        rgba(255, 152, 130, 0.4) 0%, rgba(255, 152, 130, 0) 70%
-
+        rgba(255, 152, 130, 0.4) 0%,
+        rgba(255, 152, 130, 0) 70%
       );
     position: absolute;
     right: 0;

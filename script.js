@@ -80,25 +80,49 @@ cards.forEach((card) => {
   });
 });
 
-
 document.getElementById("dropdown-btn").addEventListener("click", function () {
-  var dropdownContent = document.querySelector(".joinform__form-dropdown-content");
-  dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+  var dropdownContent = document.querySelector(
+    ".joinform__form-dropdown-content"
+  );
+  dropdownContent.style.display =
+    dropdownContent.style.display === "block" ? "none" : "block";
 });
 
-document.querySelectorAll(".joinform__form-dropdown-option").forEach(function (option) {
-  option.addEventListener("click", function () {
-    var selectedValue = option.textContent;
-    document.getElementById("dropdown-btn").textContent = selectedValue;
-    document.querySelector(".joinform__form-dropdown-content").style.display = "none";
+document
+  .querySelectorAll(".joinform__form-dropdown-option")
+  .forEach(function (option) {
+    option.addEventListener("click", function () {
+      var selectedValue = option.textContent;
+      document.getElementById("dropdown-btn").textContent = selectedValue;
+      document.querySelector(".joinform__form-dropdown-content").style.display =
+        "none";
+    });
   });
-});
-
 
 const messageInput = document.getElementById("message");
 const messageCounter = document.getElementById("message-counter");
 
-messageInput.addEventListener("input", function() {
+messageInput.addEventListener("input", function () {
   const currentLength = messageInput.value.length;
   messageCounter.textContent = `${currentLength}/500`;
+});
+
+document
+  .querySelector(".tour-main-img-video")
+  .addEventListener("click", function () {
+    const video = document.querySelector(".main-video");
+    video.style.display = "block";
+    video.classList.add("main-video-checked");
+    video.pause();
+    video.currentTime = 0;
+    video.play();
+    document.querySelector(".close-button").style.display = "block";
+  });
+
+document.querySelector(".close-button").addEventListener("click", function () {
+  const video = document.querySelector(".main-video");
+  video.pause();
+  video.currentTime = 0;
+  video.style.display = "none";
+  document.querySelector(".close-button").style.display = "none";
 });

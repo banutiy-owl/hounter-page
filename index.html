@@ -20,22 +20,24 @@
         <nav class="navigation__nav">
           <div class="navigation__item">About us</div>
           <div class="navigation__item">Article</div>
-          <div class="navigation__item navigation__item--property">
-            Property
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.1353 5.0018C9.87047 5.00135 9.61386 5.08254 9.40997 5.2313C9.29522 5.31506 9.20036 5.41793 9.13083 5.53402C9.0613 5.65011 9.01847 5.77714 9.00479 5.90782C8.9911 6.03851 9.00683 6.17029 9.05108 6.29562C9.09533 6.42094 9.16722 6.53735 9.26265 6.63818L14.3397 11.9863L9.44397 17.3444C9.34983 17.4465 9.27953 17.5639 9.23711 17.69C9.19469 17.8161 9.18099 17.9482 9.19679 18.079C9.21258 18.2097 9.25757 18.3364 9.32916 18.4518C9.40075 18.5672 9.49754 18.669 9.61396 18.7513C9.73121 18.8421 9.86853 18.9107 10.0173 18.9526C10.166 18.9945 10.323 19.0088 10.4784 18.9948C10.6337 18.9807 10.7841 18.9385 10.9201 18.8709C11.0561 18.8032 11.1747 18.7116 11.2685 18.6016L16.7422 12.6149C16.9089 12.4364 17 12.2124 17 11.9813C17 11.7502 16.9089 11.5263 16.7422 11.3477L11.0759 5.36101C10.9622 5.24026 10.8178 5.14481 10.6543 5.0824C10.4909 5.01999 10.3131 4.99238 10.1353 5.0018Z"
-              />
-            </svg>
-            <div class="dropdown-content">
-              <div class="dropdown-item">Property 1</div>
-              <div class="dropdown-item">Property 2</div>
-              <div class="dropdown-item">Property 3</div>
+          <div class="navigation__item--property">
+            <div class="navigation__item">
+              Property
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.1353 5.0018C9.87047 5.00135 9.61386 5.08254 9.40997 5.2313C9.29522 5.31506 9.20036 5.41793 9.13083 5.53402C9.0613 5.65011 9.01847 5.77714 9.00479 5.90782C8.9911 6.03851 9.00683 6.17029 9.05108 6.29562C9.09533 6.42094 9.16722 6.53735 9.26265 6.63818L14.3397 11.9863L9.44397 17.3444C9.34983 17.4465 9.27953 17.5639 9.23711 17.69C9.19469 17.8161 9.18099 17.9482 9.19679 18.079C9.21258 18.2097 9.25757 18.3364 9.32916 18.4518C9.40075 18.5672 9.49754 18.669 9.61396 18.7513C9.73121 18.8421 9.86853 18.9107 10.0173 18.9526C10.166 18.9945 10.323 19.0088 10.4784 18.9948C10.6337 18.9807 10.7841 18.9385 10.9201 18.8709C11.0561 18.8032 11.1747 18.7116 11.2685 18.6016L16.7422 12.6149C16.9089 12.4364 17 12.2124 17 11.9813C17 11.7502 16.9089 11.5263 16.7422 11.3477L11.0759 5.36101C10.9622 5.24026 10.8178 5.14481 10.6543 5.0824C10.4909 5.01999 10.3131 4.99238 10.1353 5.0018Z"
+                />
+              </svg>
+              <div class="dropdown-content">
+                <div class="dropdown-item dropdown-item--1">Property 1</div>
+                <div class="dropdown-item">Property 2</div>
+                <div class="dropdown-item dropdown-item--last">Property 3</div>
+              </div>
             </div>
           </div>
           <div class="navigation__item-wrapper">
@@ -601,15 +603,78 @@
           </div>
           <div class="tour-content__right">
             <div class="tour-content__right-imgs">
-              <img src="imgs/tour-main.png" alt="" class="main-image" />
+              <div class="tour-main-img-video">
+                <div class="tour-top-grey"></div>
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_15_924)">
+                    <path
+                      d="M33 24.5L18.5 13.5H18V34.5L33 24.5Z"
+                      fill="white"
+                    />
+                    <g filter="url(#filter0_b_15_924)">
+                      <path
+                        d="M48 24C48 30.3652 45.4714 36.4697 40.9706 40.9706C36.4697 45.4714 30.3652 48 24 48C17.6348 48 11.5303 45.4714 7.02944 40.9706C2.52856 36.4697 0 30.3652 0 24C0 17.6348 2.52856 11.5303 7.02944 7.02944C11.5303 2.52856 17.6348 0 24 0C30.3652 0 36.4697 2.52856 40.9706 7.02944C45.4714 11.5303 48 17.6348 48 24ZM20.37 15.279C20.1457 15.1193 19.8818 15.0244 19.6072 15.0048C19.3325 14.9851 19.0578 15.0414 18.813 15.1675C18.5683 15.2936 18.3629 15.4846 18.2195 15.7197C18.0761 15.9547 18.0002 16.2247 18 16.5V31.5C18.0002 31.7753 18.0761 32.0453 18.2195 32.2803C18.3629 32.5154 18.5683 32.7064 18.813 32.8325C19.0578 32.9586 19.3325 33.0149 19.6072 32.9952C19.8818 32.9756 20.1457 32.8807 20.37 32.721L30.87 25.221C31.0644 25.0822 31.2229 24.8991 31.3323 24.6867C31.4416 24.4743 31.4987 24.2389 31.4987 24C31.4987 23.7611 31.4416 23.5257 31.3323 23.3133C31.2229 23.1009 31.1944 23.1388 31 23L20.37 15.279Z"
+                        fill="white"
+                        fill-opacity="0.5"
+                      />
+                    </g>
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_b_15_924"
+                      x="-5"
+                      y="-5"
+                      width="58"
+                      height="58"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feGaussianBlur
+                        in="BackgroundImageFix"
+                        stdDeviation="2.5"
+                      />
+                      <feComposite
+                        in2="SourceAlpha"
+                        operator="in"
+                        result="effect1_backgroundBlur_15_924"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_backgroundBlur_15_924"
+                        result="shape"
+                      />
+                    </filter>
+                    <clipPath id="clip0_15_924">
+                      <rect width="48" height="48" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <img src="imgs/tour-main.png" alt="" class="main-image" />
+              </div>
               <img src="imgs/tour-mid.jpeg" alt="" class="mid-image" />
               <img
                 src="imgs/tour-sm.jpeg"
                 alt=""
                 class="small-image small-image-1"
               />
-              <img src="imgs/tour-sm-2.jpeg" alt="" class="small-image" />
+              <img src="imgs/tour-sm-2.jpeg" alt="" class="small-image small-image-2" />
             </div>
+            <svg class="close-button" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6L6 19M6 6l13 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <video class="main-video" loop>
+              <source src="imgs/tour-video.mp4" type="video/mp4" />
+              
+            </video>
           </div>
         </div>
         <div class="tour-gradient"></div>
