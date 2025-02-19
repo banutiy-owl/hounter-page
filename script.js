@@ -124,3 +124,43 @@ document.querySelector(".close-button").addEventListener("click", function () {
   video.style.display = "none";
   document.querySelector(".close-button").style.display = "none";
 });
+
+
+
+//------subscribe section
+
+const form = document.querySelector(".subscribe__form");
+  const emailInput = document.querySelector("#email");
+  const submitButton = document.querySelector(".btn--green__subscribe");
+  const errorMessage = document.querySelector(".error-message");
+
+  form.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      emailInput.blur();
+    }
+  });
+
+  emailInput.addEventListener("blur", function () {
+    const emailValue = emailInput.value.trim();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(emailValue)) {
+      form.style.border = "2px solid red";
+      errorMessage.style.display = "block";
+    } else {
+      form.style.border = "none";
+      errorMessage.style.display = "none";
+    }
+  });
+
+  submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const emailValue = emailInput.value.trim();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (emailRegex.test(emailValue)) {
+      alert("Welcome to Hounter!");
+      emailInput.value="";
+    } 
+  });

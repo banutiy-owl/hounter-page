@@ -743,6 +743,9 @@ input::placeholder {
 .subscribe {
   margin: 15rem 10rem;
   position: relative; }
+  .subscribe .error-message {
+    color: #EF4444;
+    display: none; }
   .subscribe__block {
     text-align: center;
     border-radius: 3.2rem;
@@ -762,6 +765,7 @@ input::placeholder {
     width: 50rem;
     padding: 0 0.3rem; }
     .subscribe__form-input {
+      font-size: 1.4rem;
       border: 0;
       outline: 0;
       border-radius: 5em;
