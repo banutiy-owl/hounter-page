@@ -1,43 +1,54 @@
-/*const featuredHouseListCards = document.querySelector('.featured-house__list');
+//------start of featured house section
+const featuredHouseSlider = document.querySelector(".featured-house__list");
+const arrowLeft = document.querySelector("#arrow-left");
+const arrowRight = document.querySelector("#arrow-right");
 
-  featuredHouseListCards.addEventListener('scroll', () => {
-    if (featuredHouseListCards.scrollLeft > 0) {
-      featuredHouseListCards.style.marginLeft = '0';
+const scrollStep = 300;
+
+arrowLeft.addEventListener("click", () => {
+  featuredHouseSlider.scrollBy({
+    left: -scrollStep,
+    behavior: "smooth",
+  });
+});
+
+arrowRight.addEventListener("click", () => {
+  featuredHouseSlider.scrollBy({
+    left: scrollStep,
+    behavior: "smooth",
+  });
+});
+
+const featuredHouseRadioButtons = document.querySelectorAll(
+  'input[name="radioTypeHouses"]'
+);
+const featuredHouseCards = document.querySelectorAll(
+  ".featured-house__list-card"
+);
+
+function filterFeaturedHouseCardsByType(selectedType) {
+  featuredHouseCards.forEach((featuredHouseCard) => {
+    const featuredHouseCardType = featuredHouseCard.getAttribute("data-type");
+    if (featuredHouseCardType === selectedType || selectedType === "all") {
+      featuredHouseCard.classList.add("visible");
     } else {
-      featuredHouseListCards.style.marginLeft = '10rem'; 
+      featuredHouseCard.classList.remove("visible");
     }
   });
+}
 
-const carousel = document.querySelector('.carousel');
-
-carousel.addEventListener('scroll', () => {
-  if (carousel.scrollLeft > 0) {
-    carousel.style.marginLeft = '-4.8rem';
-  } else {
-    carousel.style.marginLeft = '0'; 
-  }
-});
-
-
-const radioButtons = document.querySelectorAll('input[name="slider"]');
-const slider = document.querySelector(".about__cards");
-
-radioButtons.forEach((radio, index) => {
-  radio.addEventListener("change", () => {
-    if (radio.checked) {
-      slider.style.transition = "transform 0.5s ease-in-out";
-      if (index === 0) {
-        slider.style.transform = "translateX(0)";
-      } else if (index === 1) {
-        slider.style.transform = "translateX(-25%)";
-      } else if (index === 2) {
-        slider.style.transform = "translateX(-57%)";
-      }
-    }
+featuredHouseRadioButtons.forEach((featuredHouseRadio) => {
+  featuredHouseRadio.addEventListener("change", function () {
+    const selectedType = this.value;
+    filterFeaturedHouseCardsByType(selectedType);
   });
 });
 
-*/
+filterFeaturedHouseCardsByType(
+  document.querySelector('input[name="radioTypeHouses"]:checked').value
+);
+
+//------end of featured house section
 
 //------start of tour section
 
