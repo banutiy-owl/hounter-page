@@ -611,12 +611,15 @@ input::placeholder {
   .about__slider {
     display: flex;
     overflow-x: auto;
-    padding: 0 10rem; }
+    padding: 0 10rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 10rem; }
     .about__slider::-webkit-scrollbar {
       background-color: transparent; }
   .about__cards {
     display: flex;
-    gap: 3.2rem; }
+    gap: 3.2rem;
+    scroll-snap-align: start; }
   .about__card {
     flex-shrink: 0;
     position: relative;
@@ -651,14 +654,6 @@ input::placeholder {
     margin-top: 2rem; }
     .about__dots input[type="radio"] {
       display: none; }
-    .about__dots input[type="radio"]:checked + .about__dot {
-      background-color: #626687; }
-    .about__dots #dot1:checked ~ .about__slider {
-      padding-left: 0; }
-    .about__dots #dot2:checked ~ .about__slider {
-      background-color: black; }
-    .about__dots #dot3:checked ~ .about__slider {
-      transform: translateX(-200%); }
   .about__dot {
     display: inline-block;
     cursor: pointer;
@@ -667,6 +662,8 @@ input::placeholder {
     background-color: #E0E3EB;
     border-radius: 50%;
     transition: background-color 0.3s; }
+    .about__dot.active {
+      background-color: #626687; }
 
 .findout {
   padding: 0 10rem;
@@ -950,7 +947,8 @@ input::placeholder {
     .joinform__form .custom-checkbox {
       display: flex;
       width: 78%;
-      cursor: pointer; }
+      cursor: pointer;
+      padding-left: 0; }
       .joinform__form .custom-checkbox input {
         display: none; }
       .joinform__form .custom-checkbox .checkbox {
@@ -1124,8 +1122,13 @@ input::placeholder {
     padding-right: 12rem;
     position: relative; }
     .footer__left .social-icons {
+      color: #1B1C57;
       display: flex;
-      gap: 2.4rem; }
+      gap: 2.4rem;
+      cursor: pointer;
+      transition: all 0.2s ease-out; }
+      .footer__left .social-icons svg:hover {
+        color: #10B981; }
     .footer__left p {
       margin: 1.2rem 0 2.4rem; }
   .footer__right {

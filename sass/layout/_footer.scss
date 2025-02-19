@@ -31,8 +31,15 @@
     padding-right: 12rem;
     position: relative;
     .social-icons {
+      color: $color-black;
       display: flex;
       gap: 2.4rem;
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+
+      & svg:hover {
+        color: $color-primary;
+      }
     }
 
     p {

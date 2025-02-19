@@ -18,7 +18,7 @@ carousel.addEventListener('scroll', () => {
   }
 });
 
-*/
+
 const radioButtons = document.querySelectorAll('input[name="slider"]');
 const slider = document.querySelector(".about__cards");
 
@@ -36,6 +36,129 @@ radioButtons.forEach((radio, index) => {
     }
   });
 });
+
+*/
+
+//------start of tour section
+
+document
+  .querySelector(".tour-main-img-video")
+  .addEventListener("click", function () {
+    const video = document.querySelector(".main-video");
+    video.style.display = "block";
+    video.classList.add("main-video-checked");
+    video.pause();
+    video.currentTime = 0;
+    video.play();
+    document.querySelector(".close-button").style.display = "block";
+  });
+
+document.querySelector(".close-button").addEventListener("click", function () {
+  const video = document.querySelector(".main-video");
+  video.pause();
+  video.currentTime = 0;
+  video.style.display = "none";
+  document.querySelector(".close-button").style.display = "none";
+});
+
+//------end of tour section
+
+//------start of about section
+const aboutDots = document.querySelectorAll('.about__dots input[type="radio"]');
+const aboutSlider = document.querySelector(".about__slider");
+const aboutCards = document.querySelectorAll(".about__card");
+const aboutDotLabels = document.querySelectorAll(".about__dot");
+
+const cardGap = 32;
+
+aboutDots.forEach((dot, index) => {
+  dot.addEventListener("change", () => {
+    const cardWidth = aboutCards[index].offsetWidth;
+    const offset = index * (cardWidth + cardGap);
+
+    aboutSlider.scrollLeft = offset;
+    aboutDotLabels.forEach((dotLabel) => dotLabel.classList.remove("active"));
+    aboutDotLabels[index].classList.add("active");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutSlider = document.querySelector(".about__slider");
+  const aboutCards = document.querySelectorAll(".about__card");
+  const aboutDotLabels = document.querySelectorAll(".about__dot");
+
+  function updateDotsOnScroll() {
+    const sliderWidth = aboutSlider.offsetWidth;
+    const scrollLeft = aboutSlider.scrollLeft;
+
+    for (let i = 0; i < aboutCards.length; i++) {
+      const card = aboutCards[i];
+      const cardOffsetLeft = card.offsetLeft;
+      const cardWidth = card.offsetWidth;
+
+      if (
+        scrollLeft + sliderWidth >= cardOffsetLeft + cardWidth &&
+        scrollLeft <= cardOffsetLeft
+      ) {
+        aboutDotLabels.forEach((dotLabel) =>
+          dotLabel.classList.remove("active")
+        );
+        aboutDotLabels[i].classList.add("active");
+        break;
+      }
+    }
+  }
+
+  aboutSlider.addEventListener("scroll", updateDotsOnScroll);
+
+  updateDotsOnScroll();
+});
+
+let isDragging = false;
+let startPosition = 0;
+let scrollPosition = 0;
+
+aboutSlider.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startPosition = e.clientX;
+  scrollPosition = aboutSlider.scrollLeft;
+  aboutSlider.style.cursor = "grabbing";
+});
+
+aboutSlider.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  startPosition = e.touches[0].clientX;
+  scrollPosition = aboutSlider.scrollLeft;
+  aboutSlider.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  const diff = e.clientX - startPosition;
+  aboutSlider.scrollLeft = scrollPosition - diff;
+});
+
+document.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+
+  const diff = e.touches[0].clientX - startPosition;
+  aboutSlider.scrollLeft = scrollPosition - diff;
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  aboutSlider.style.cursor = "grab";
+});
+
+document.addEventListener("touchend", () => {
+  isDragging = false;
+  aboutSlider.style.cursor = "grab";
+});
+
+//------end of about section
+
+//------start of findout section
 
 document
   .getElementById("more-articles-button")
@@ -57,9 +180,9 @@ document
     }
   });
 
-const cards = document.querySelectorAll(".findout__card");
+const findoutCards = document.querySelectorAll(".findout__card");
 
-cards.forEach((card) => {
+findoutCards.forEach((card) => {
   card.addEventListener("click", function () {
     const title = card.querySelector(".findout__card-title").textContent;
     const ownerName = card.querySelector(
@@ -77,6 +200,50 @@ cards.forEach((card) => {
     mainCard.querySelector(".findout__card-main-avatar").src = ownerPhoto;
   });
 });
+
+//------end of findout section
+
+//------start of subscribe section
+
+const form = document.querySelector(".subscribe__form");
+const emailInput = document.querySelector("#email");
+const submitButton = document.querySelector(".btn--green__subscribe");
+const errorMessage = document.querySelector(".error-message");
+
+form.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    emailInput.blur();
+  }
+});
+
+emailInput.addEventListener("blur", function () {
+  const emailValue = emailInput.value.trim();
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!emailRegex.test(emailValue)) {
+    form.style.border = "2px solid red";
+    errorMessage.style.display = "block";
+  } else {
+    form.style.border = "none";
+    errorMessage.style.display = "none";
+  }
+});
+
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  const emailValue = emailInput.value.trim();
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (emailRegex.test(emailValue)) {
+    alert("Welcome to Hounter!");
+    emailInput.value = "";
+  }
+});
+
+//-----end of subscribe section
+
+//------start of joinform section
 
 document.getElementById("dropdown-btn").addEventListener("click", function () {
   var dropdownContent = document.querySelector(
@@ -105,62 +272,4 @@ messageInput.addEventListener("input", function () {
   messageCounter.textContent = `${currentLength}/500`;
 });
 
-document
-  .querySelector(".tour-main-img-video")
-  .addEventListener("click", function () {
-    const video = document.querySelector(".main-video");
-    video.style.display = "block";
-    video.classList.add("main-video-checked");
-    video.pause();
-    video.currentTime = 0;
-    video.play();
-    document.querySelector(".close-button").style.display = "block";
-  });
-
-document.querySelector(".close-button").addEventListener("click", function () {
-  const video = document.querySelector(".main-video");
-  video.pause();
-  video.currentTime = 0;
-  video.style.display = "none";
-  document.querySelector(".close-button").style.display = "none";
-});
-
-
-
-//------subscribe section
-
-const form = document.querySelector(".subscribe__form");
-  const emailInput = document.querySelector("#email");
-  const submitButton = document.querySelector(".btn--green__subscribe");
-  const errorMessage = document.querySelector(".error-message");
-
-  form.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      emailInput.blur();
-    }
-  });
-
-  emailInput.addEventListener("blur", function () {
-    const emailValue = emailInput.value.trim();
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    
-    if (!emailRegex.test(emailValue)) {
-      form.style.border = "2px solid red";
-      errorMessage.style.display = "block";
-    } else {
-      form.style.border = "none";
-      errorMessage.style.display = "none";
-    }
-  });
-
-  submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    const emailValue = emailInput.value.trim();
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    if (emailRegex.test(emailValue)) {
-      alert("Welcome to Hounter!");
-      emailInput.value="";
-    } 
-  });
+//------end of joinform section
