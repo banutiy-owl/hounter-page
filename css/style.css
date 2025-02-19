@@ -27,6 +27,9 @@ body {
   line-height: 1.5;
   color: #626687; }
 
+input::placeholder {
+  font-family: "Lexend", sans-serif; }
+
 .text-medium {
   font-weight: 500; }
 
@@ -399,6 +402,8 @@ body {
     border-color: #10B981; }
 
 .featured-house__head-types {
+  display: flex;
+  gap: 2.7rem;
   margin: 10px; }
   .featured-house__head-types input[type="radio"] {
     opacity: 0;
@@ -415,7 +420,8 @@ body {
     padding: 1.2rem 2.4rem;
     font-size: 1.4rem;
     border: 1px solid #0B9567;
-    border-radius: 10rem; }
+    border-radius: 10rem;
+    cursor: pointer; }
     .featured-house__head-types label:hover {
       background-color: #D1FAE5; }
     .featured-house__head-types label .radio-house-option {
@@ -702,10 +708,13 @@ body {
         height: 3.2rem;
         margin-right: 1.6rem; }
     .findout__card-title {
-      margin-top: 1.2rem; }
+      margin-top: 1.2rem;
+      cursor: pointer; }
+      .findout__card-title:hover {
+        text-decoration: underline; }
     .findout__card-main {
       position: sticky;
-      top: 0;
+      top: 2rem;
       z-index: 10; }
       .findout__card-main-image {
         height: 28rem;
@@ -727,7 +736,7 @@ body {
       flex: 1; }
     .findout__container--right {
       flex: 1;
-      padding: 0 3rem; }
+      padding: 0 3rem .5rem; }
       .findout__container--right .time-info {
         margin-top: 0.6rem; }
 

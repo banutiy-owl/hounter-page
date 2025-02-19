@@ -6,6 +6,10 @@ body {
   color: $color-grey-3;
 }
 
+input::placeholder {
+  font-family: "Lexend", sans-serif;
+}
+
 .text-medium {
   font-weight: 500;
 }
@@ -17,7 +21,7 @@ body {
 .item-bold {
   color: $color-black;
 }
-.item-grey3{
+.item-grey3 {
   color: $color-grey-3;
 }
 
@@ -25,7 +29,7 @@ body {
   color: $color-grey-2;
 }
 
-.paragraph{
+.paragraph {
   font-weight: 300;
   font-size: 1.6rem;
   line-height: 1.5;

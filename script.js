@@ -44,18 +44,16 @@ document
       ".findout__cards .findout__card:nth-child(n+4)"
     );
 
-    hiddenCards.forEach((card) => {
-      if (card.style.display === "none" || card.style.display === "") {
-        card.style.display = "flex";
-      } else {
-        card.style.display = "none";
-      }
-    });
-
     if (this.textContent === "More articles") {
       this.textContent = "Less articles";
+      hiddenCards.forEach((card) => {
+        card.style.display = "flex";
+      });
     } else {
       this.textContent = "More articles";
+      hiddenCards.forEach((card) => {
+        card.style.display = "none";
+      });
     }
   });
 
