@@ -36,20 +36,11 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-
-    .left {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-  }
 }
 
-@media (max-width: 1024px) {
+
+
+@media (max-width: 1330px) {
   .section-hero {
     .left {
       padding: 5rem;
@@ -60,10 +51,10 @@
       }
 
       .search {
-        padding-left: 5rem;
+        padding: 0 5rem;
 
         form {
-          width: 34.2rem;
+          
 
           button {
             padding: 1.2rem;
@@ -74,10 +65,10 @@
         }
       }
 
-      .partnership--companies{
+      .partnership--companies {
         padding-left: 5rem;
 
-        img{
+        img {
           width: 7rem;
         }
       }

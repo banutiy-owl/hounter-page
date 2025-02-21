@@ -187,9 +187,8 @@
 
     .custom-checkbox {
       display: flex;
-      width: 78%;
       cursor: pointer;
-      padding-left: 0;
+      padding-left: 20%;
 
       input {
         display: none;
@@ -235,6 +234,12 @@
 @media (max-width: 1024px) {
   .joinform {
     &__form {
+      .custom-checkbox{
+        .checkbox {
+          width: 7rem;
+          height: 2rem;
+        }
+      }
     }
   }
 }

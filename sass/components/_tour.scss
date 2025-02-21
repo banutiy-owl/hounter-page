@@ -3,6 +3,7 @@
   position: relative;
 
   &-main-img-video {
+    position: relative;
     cursor: pointer;
     svg {
       position: absolute;
@@ -19,9 +20,7 @@
       height: 41.6rem;
       width: 43rem;
       object-fit: cover;
-      z-index: 6;
-      position: absolute;
-      left: 19rem;
+    
     }
   }
 
@@ -81,7 +80,7 @@
       display: flex;
       position: relative;
 
-      .close-button{
+      .close-button {
         display: none;
         position: absolute;
         z-index: 11;
@@ -127,7 +126,7 @@
             right: 13rem;
           }
 
-          &-2{
+          &-2 {
             right: 2rem;
           }
           z-index: 7;
@@ -154,5 +153,74 @@
     height: 80rem;
     width: 53rem;
     z-index: -10;
+  }
+}
+
+@media (max-width: 1285px) {
+  .tour {
+    &-main-img-video {
+      padding-top: 3rem;
+      width: 34.6rem;
+      height: 35.8rem;
+      .tour-top-grey,
+      .main-image {
+        padding: 0;
+        margin: 0;
+        width: 34.6rem;
+        height: 35.8rem;
+      }
+
+      svg {
+        left: 15rem;
+        top: 18rem;
+      }
+    }
+
+    .main-video-checked {
+      width: 34.6rem;
+      height: 35.8rem;
+     
+    }
+    &-content {
+      &__right {
+        &-imgs {
+          .mid-image,
+          .small-image {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .tour {
+    &-main-img-video {
+      padding-top: 3rem;
+      width: 28.6rem;
+      height: 32.8rem;
+      .tour-top-grey,
+      .main-image {
+        padding: 0;
+        margin: 0;
+        width: 28.6rem;
+        height: 29.8rem;
+      }
+
+      svg {
+        left: 12rem;
+        top: 16rem;
+      }
+    }
+    .main-video-checked {
+      width: 28.6rem;
+      height: 29.8rem;
+      margin-top: 3rem;
+    }
+
+    .close-button {
+      top:4rem;
+    }
   }
 }

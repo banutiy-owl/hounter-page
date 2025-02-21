@@ -17,15 +17,27 @@
       </div>
 
       <div class="burger-menu" id="burgerMenu">
-        <svg class="burger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg
+          class="burger-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="30"
+          height="30"
+        >
+          <path
+            d="M3 6h18M3 12h18M3 18h18"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
       </div>
 
       <div class="navigation text-semibold">
         <nav class="navigation__nav">
-          <div class="navigation__item">About us</div>
-          <div class="navigation__item">Article</div>
+          <div class="navigation__item"><a href="#about">About us</a></div>
+          <div class="navigation__item"><a href="#findout">Article</a></div>
           <div class="navigation__item--property">
             <div class="navigation__item">
               Property
@@ -51,9 +63,26 @@
           </div>
         </nav>
       </div>
+      <div class="header__dropdown-menu" id="header__dropdownMenu">
+        <div class="header__dropdown-item header__dropdown-item--first">
+          <a href="#about">About Us</a>
+        </div>
+        <div class="header__dropdown-item"><a href="#findout">Article</a></div>
+        <div class="header__dropdown-item--property">
+          <div class="header__dropdown-item">Property</div>
+          <div class="header__dropdown-content">
+            <div class="header__dropdown-item">Property 1</div>
+            <div class="header__dropdown-item">Property 2</div>
+            <div class="header__dropdown-item">Property 3</div>
+          </div>
+        </div>
+        <div class="header__dropdown-item header__dropdown-item--last">
+          Sign Up
+        </div>
+      </div>
     </header>
     <main>
-      <section class="section-hero">
+      <section class="section-hero" id="section-hero">
         <div class="container">
           <div class="left">
             <div class="heading u-margin-top-huge">
@@ -164,7 +193,7 @@
         </div>
       </section>
 
-      <section class="featured-house">
+      <section class="featured-house" id="featured-house">
         <div class="subtitle label label--default u-margin-left-body">
           Our Recommendation
         </div>
@@ -739,7 +768,7 @@
           </div>
         </div>
       </section>
-      <section class="tour">
+      <section class="tour" id="tour">
         <div class="subtitle label label--default">Ready to Sell!</div>
         <div class="tour-content">
           <div class="tour-content__left">
@@ -988,7 +1017,7 @@
         <div class="tour-gradient"></div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__head">
           <div class="subtitle-above label label--default">See Our Review</div>
           <h2 class="heading heading--2">What Our User Say About Us</h2>
@@ -1156,7 +1185,7 @@
         </div>
       </section>
 
-      <section class="findout">
+      <section class="findout" id="findout">
         <div class="findout__head">
           <div class="subtitle-above label label--default">
             See tips and trick from our partnership
@@ -1474,7 +1503,7 @@
         </div>
         <div class="findout-gradient"></div>
       </section>
-      <section class="subscribe">
+      <section class="subscribe" id="subscribe">
         <div class="subscribe__block">
           <h2 class="heading heading--2">
             Subscribe For More Info<br />
@@ -1562,7 +1591,7 @@
           </div>
         </div>
       </section>
-      <section class="joinform">
+      <section class="joinform" id="joinform">
         <div class="joinform__left">
           <h3 class="heading heading--3">Would you like to join?</h3>
           <div class="joinform__left-text">
@@ -1584,9 +1613,11 @@
         <div class="joinform__right">
           <form class="joinform__form">
             <div class="joinform__form-name">
-              <div class="label-wrapper"><label class="label label--default label--medium" for="name"
-                >Name</label
-              ></div>
+              <div class="label-wrapper">
+                <label class="label label--default label--medium" for="name"
+                  >Name</label
+                >
+              </div>
               <input
                 type="text"
                 id="name"
@@ -1597,9 +1628,11 @@
             </div>
 
             <div class="joinform__form-surname">
-              <div class="label-wrapper"><label class="label label--default label--medium" for="surname"
-                >Surname</label
-              ></div>
+              <div class="label-wrapper">
+                <label class="label label--default label--medium" for="surname"
+                  >Surname</label
+                >
+              </div>
               <input
                 type="text"
                 id="surname"
@@ -1610,9 +1643,13 @@
             </div>
 
             <div class="joinform__form-education">
-              <div class="label-wrapper"><label class="label label--default label--medium" for="education"
-                >Education</label
-              ></div>
+              <div class="label-wrapper">
+                <label
+                  class="label label--default label--medium"
+                  for="education"
+                  >Education</label
+                >
+              </div>
               <div class="joinform__form-dropdown">
                 <button
                   type="button"
@@ -1651,9 +1688,11 @@
             </div>
 
             <div class="joinform__form-message">
-              <div class="label-wrapper"><label class="label label--default label--medium" for="message"
-                >Message</label
-              ></div>
+              <div class="label-wrapper">
+                <label class="label label--default label--medium" for="message"
+                  >Message</label
+                >
+              </div>
               <textarea
                 id="message"
                 name="message"
@@ -1734,18 +1773,32 @@
           <div class="footer__part footer__part-property">
             <h4 class="heading heading--sub">Property</h4>
             <div class="footer__part-links item-light">
-              <div class="footer__part-link">House</div>
-              <div class="footer__part-link">Apartment</div>
-              <div class="footer__part-link">Villa</div>
+              <div class="footer__part-link">
+                <a href="#featured-house">House</a>
+              </div>
+              <div class="footer__part-link">
+                <a href="#featured-house">Apartment</a>
+              </div>
+              <div class="footer__part-link">
+                <a href="#featured-house">Villa</a>
+              </div>
             </div>
           </div>
           <div class="footer__part footer__part-article">
             <h4 class="heading heading--sub">Article</h4>
             <div class="footer__part-links item-light">
-              <div class="footer__part-link">New Article</div>
-              <div class="footer__part-link">Popular Article</div>
-              <div class="footer__part-link">Most Read</div>
-              <div class="footer__part-link">Tips & Tricks</div>
+              <div class="footer__part-link">
+                <a href="#findout">New Article</a>
+              </div>
+              <div class="footer__part-link">
+                <a href="#findout">Popular Article</a>
+              </div>
+              <div class="footer__part-link">
+                <a href="#findout">Most Read</a>
+              </div>
+              <div class="footer__part-link">
+                <a href="#findout">Tips & Tricks</a>
+              </div>
             </div>
           </div>
           <div class="footer__part footer__part-contact">

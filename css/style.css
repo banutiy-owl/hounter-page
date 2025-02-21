@@ -20,6 +20,10 @@ img {
 button {
   cursor: pointer; }
 
+a, a:visited {
+  text-decoration: none;
+  color: inherit; }
+
 body {
   font-family: "Lexend", sans-serif;
   font-weight: 300;
@@ -234,7 +238,7 @@ input::placeholder, textarea {
   justify-content: space-between;
   align-items: center;
   height: 5.6rem;
-  width: 50rem;
+  width: 100%;
   padding: 0 0.3rem; }
 
 .search--form__input {
@@ -362,29 +366,19 @@ input::placeholder, textarea {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
-  @media (max-width: 768px) {
-    .section-hero {
-      flex-direction: column;
-      align-items: center;
-      padding-top: 2rem; }
-      .section-hero .left {
-        padding: 2rem 1rem;
-        text-align: center; } }
 
-@media (max-width: 1024px) {
+@media (max-width: 1330px) {
   .section-hero .left {
     padding: 5rem; }
     .section-hero .left .heading,
     .section-hero .left p {
       padding: 0 5rem; }
     .section-hero .left .search {
-      padding-left: 5rem; }
-      .section-hero .left .search form {
-        width: 34.2rem; }
-        .section-hero .left .search form button {
-          padding: 1.2rem; }
-          .section-hero .left .search form button p {
-            padding: 0; }
+      padding: 0 5rem; }
+      .section-hero .left .search form button {
+        padding: 1.2rem; }
+        .section-hero .left .search form button p {
+          padding: 0; }
     .section-hero .left .partnership--companies {
       padding-left: 5rem; }
       .section-hero .left .partnership--companies img {
@@ -413,7 +407,7 @@ input::placeholder, textarea {
       .radio-wrapper .radio-label .circle .arrow-left,
       .radio-wrapper .radio-label .circle .arrow-right {
         color: #10B981;
-        padding-top: .6rem; }
+        padding-top: 0.6rem; }
   .radio-wrapper .radio:checked + .radio-label .circle {
     background-color: #10B981;
     border-color: #10B981; }
@@ -423,6 +417,11 @@ input::placeholder, textarea {
   .radio-wrapper .radio:not(:checked) + .radio-label .circle {
     background-color: #fff;
     border-color: #10B981; }
+
+@media (max-width: 1024px) {
+  .radio-wrapper .radio-label .circle {
+    width: 4rem;
+    height: 4rem; } }
 
 .featured-house__head-types {
   display: flex;
@@ -460,6 +459,8 @@ input::placeholder, textarea {
     align-items: center;
     justify-content: space-between;
     padding: 0 10rem; }
+  .featured-house__change-cards {
+    display: flex; }
   .featured-house__list {
     display: flex;
     overflow-x: auto;
@@ -505,6 +506,16 @@ input::placeholder, textarea {
       .featured-house__list-card .main-info {
         margin-bottom: 2.4rem; }
 
+@media (max-width: 1024px) {
+  .featured-house__head {
+    padding-right: 8rem; }
+    .featured-house__head-types {
+      gap: 1.3rem; }
+      .featured-house__head-types label {
+        padding: 1.2rem 2rem; }
+    .featured-house__head h2 {
+      padding-right: 2rem; } }
+
 .house-detail-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -530,6 +541,7 @@ input::placeholder, textarea {
   padding: 0 10rem;
   position: relative; }
   .tour-main-img-video {
+    position: relative;
     cursor: pointer; }
     .tour-main-img-video svg {
       position: absolute;
@@ -542,10 +554,7 @@ input::placeholder, textarea {
       display: block;
       height: 41.6rem;
       width: 43rem;
-      object-fit: cover;
-      z-index: 6;
-      position: absolute;
-      left: 19rem; }
+      object-fit: cover; }
   .tour-top-grey {
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -626,6 +635,48 @@ input::placeholder, textarea {
     height: 80rem;
     width: 53rem;
     z-index: -10; }
+
+@media (max-width: 1285px) {
+  .tour-main-img-video {
+    padding-top: 3rem;
+    width: 34.6rem;
+    height: 35.8rem; }
+    .tour-main-img-video .tour-top-grey,
+    .tour-main-img-video .main-image {
+      padding: 0;
+      margin: 0;
+      width: 34.6rem;
+      height: 35.8rem; }
+    .tour-main-img-video svg {
+      left: 15rem;
+      top: 18rem; }
+  .tour .main-video-checked {
+    width: 34.6rem;
+    height: 35.8rem; }
+  .tour-content__right-imgs .mid-image,
+  .tour-content__right-imgs .small-image {
+    display: none; } }
+
+@media (max-width: 1024px) {
+  .tour-main-img-video {
+    padding-top: 3rem;
+    width: 28.6rem;
+    height: 32.8rem; }
+    .tour-main-img-video .tour-top-grey,
+    .tour-main-img-video .main-image {
+      padding: 0;
+      margin: 0;
+      width: 28.6rem;
+      height: 29.8rem; }
+    .tour-main-img-video svg {
+      left: 12rem;
+      top: 16rem; }
+  .tour .main-video-checked {
+    width: 28.6rem;
+    height: 29.8rem;
+    margin-top: 3rem; }
+  .tour .close-button {
+    top: 4rem; } }
 
 .about {
   padding: 15rem 0; }
@@ -845,6 +896,10 @@ input::placeholder, textarea {
       height: 3.6rem;
       width: 3.6rem; }
 
+@media (max-width: 1240px) {
+  .subscribe__pictures #sub-2, .subscribe__pictures #sub-4, .subscribe__pictures #sub-5, .subscribe__pictures #sub-7 {
+    display: none; } }
+
 .joinform {
   display: flex;
   gap: 3.2rem;
@@ -979,9 +1034,8 @@ input::placeholder, textarea {
       justify-content: flex-end; }
     .joinform__form .custom-checkbox {
       display: flex;
-      width: 78%;
       cursor: pointer;
-      padding-left: 0; }
+      padding-left: 20%; }
       .joinform__form .custom-checkbox input {
         display: none; }
       .joinform__form .custom-checkbox .checkbox {
@@ -1011,6 +1065,11 @@ input::placeholder, textarea {
         .joinform__form .custom-checkbox input:checked + .checkbox::after {
           opacity: 1; }
 
+@media (max-width: 1024px) {
+  .joinform__form .custom-checkbox .checkbox {
+    width: 7rem;
+    height: 2rem; } }
+
 .header {
   z-index: 2;
   display: flex;
@@ -1022,6 +1081,34 @@ input::placeholder, textarea {
     width: 100px;
     height: auto;
     margin-left: 7rem; }
+  .header__dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 6rem;
+    right: 3rem;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+  .header__dropdown-item {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-align: center; }
+    .header__dropdown-item:hover {
+      background-color: white; }
+    .header__dropdown-item--first {
+      padding-top: 1rem; }
+    .header__dropdown-item--last {
+      margin-top: 1.5rem;
+      background-color: #D1FAE5;
+      border: 1px solid #10B981;
+      color: #10B981; }
+  .header__dropdown-content {
+    display: none;
+    padding: 0.5rem 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 
 .navigation {
   display: flex;
@@ -1110,7 +1197,7 @@ input::placeholder, textarea {
   display: none;
   cursor: pointer; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1330px) {
   .navigation {
     display: none; }
   .burger-menu {

@@ -1,10 +1,28 @@
 //------start of header
-const burgerMenu = document.getElementById('burgerMenu');
-const navMenu = document.getElementById('navMenu');
+const burgerMenu = document.getElementById("burgerMenu");
+const headerBurgerMenu = document.querySelector(".header__dropdown-menu");
 
-burgerMenu.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
+let isBurgerOpen = false;
+
+burgerMenu.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (isBurgerOpen) {
+    headerBurgerMenu.style.display = "none";
+  } else {
+    headerBurgerMenu.style.display = "block";
+  }
+  isBurgerOpen = !isBurgerOpen;
 });
+
+document.addEventListener("click", (e) => {
+  if (!burgerMenu.contains(e.target) && !headerBurgerMenu.contains(e.target)) {
+    if (isBurgerOpen) {
+      headerBurgerMenu.style.display = "none";
+      isBurgerOpen = false;
+    }
+  }
+});
+
 
 //------end of header
 
@@ -66,6 +84,9 @@ document
   .querySelector(".tour-main-img-video")
   .addEventListener("click", function () {
     const video = document.querySelector(".main-video");
+    const image = document.querySelector(".tour-main-img-video");
+    image.style.display = "none";
+
     video.style.display = "block";
     video.classList.add("main-video-checked");
     video.pause();
@@ -76,6 +97,8 @@ document
 
 document.querySelector(".close-button").addEventListener("click", function () {
   const video = document.querySelector(".main-video");
+  const image = document.querySelector(".tour-main-img-video");
+  image.style.display = "flex";
   video.pause();
   video.currentTime = 0;
   video.style.display = "none";
@@ -181,6 +204,8 @@ document.addEventListener("touchend", () => {
 
 //------start of findout section
 
+let isMoreArticles = true;
+
 document
   .getElementById("more-articles-button")
   .addEventListener("click", function () {
@@ -188,7 +213,7 @@ document
       ".findout__cards .findout__card:nth-child(n+4)"
     );
 
-    if (this.textContent === "More articles") {
+    if (isMoreArticles) {
       this.textContent = "Less articles";
       hiddenCards.forEach((card) => {
         card.style.display = "flex";
@@ -199,6 +224,8 @@ document
         card.style.display = "none";
       });
     }
+
+    isMoreArticles = !isMoreArticles;
   });
 
 const findoutCards = document.querySelectorAll(".findout__card");
