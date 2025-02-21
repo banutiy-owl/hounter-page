@@ -6,10 +6,56 @@
   padding: 2rem 3rem;
   width: 100%;
 
-
   &__logo {
     width: 100px;
     height: auto;
     margin-left: 7rem;
   }
+
+  &__dropdown {
+    &-menu {
+      display: none;
+      position: absolute;
+      top: 6rem;
+      right: 3rem;
+      padding: 0;
+
+      background-color: rgba($color-white, 0.7);
+      border: 1px solid $color-white;
+      border-radius: 1rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &-item {
+      padding: 1rem 2rem;
+      cursor: pointer;
+      text-align: center;
+      &:hover {
+        background-color: rgba($color-white, 1);
+      }
+      &--first{
+        padding-top:1rem;
+      }
+      &--last{
+        margin-top:1.5rem;
+        background-color: $color-primary-light;
+        border: 1px solid $color-primary;
+        color: $color-primary;
+      }
+      
+    }
+
+
+
+    &-content {
+      display: none;
+      padding: 0.5rem 0;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+  
+  }
+
+
 }

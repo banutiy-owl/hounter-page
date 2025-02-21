@@ -24,3 +24,8 @@ img {
 button {
   cursor: pointer;
 }
+
+a, a:visited{
+  text-decoration: none;
+  color: inherit;
+}

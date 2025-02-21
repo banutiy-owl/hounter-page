@@ -118,3 +118,13 @@
     }
   }
 }
+
+@media (max-width: 1240px) {
+  .subscribe {
+    &__pictures {
+      #sub-2, #sub-4, #sub-5, #sub-7 {
+        display: none;
+       }
+    }
+  }
+}

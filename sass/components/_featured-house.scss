@@ -8,6 +8,10 @@
     padding: 0 10rem;
   }
 
+  &__change-cards {
+    display: flex;
+  }
+
   &__list {
     display: flex;
     overflow-x: auto;
@@ -25,8 +29,8 @@
       width: 37.6rem;
       display: none;
 
-      &.visible{
-        display:block;
+      &.visible {
+        display: block;
       }
 
       h4 {
@@ -79,6 +83,23 @@
 
       .main-info {
         margin-bottom: 2.4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .featured-house {
+    &__head {
+      padding-right: 8rem;
+      &-types {
+        gap: 1.3rem;
+        label{
+          padding: 1.2rem 2rem;
+        }
+      }
+      h2{
+        padding-right: 2rem;
       }
     }
   }

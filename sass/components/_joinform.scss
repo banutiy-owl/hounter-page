@@ -107,7 +107,7 @@
     &-surname,
     &-education {
       display: flex;
-      justify-content: space-between;
+
       align-items: center;
       margin-bottom: 1rem;
     }
@@ -118,13 +118,14 @@
       justify-content: space-between;
       position: relative;
 
-      label {
+      .label-wrapper {
         padding-top: 1.6rem;
       }
     }
 
-    label {
-      width: 8.9rem;
+    .label-wrapper {
+      display: inline-block;
+      min-width: 8.9rem;
       padding-left: 2rem;
     }
 
@@ -133,22 +134,36 @@
     &-dropdown-btn,
     &-message textarea {
       outline: 0;
-      width: 49.6rem;
+      width: 97%;
       height: 5.6rem;
+
       padding: 1.6rem;
       border: 1px solid $color-grey-1;
       background-color: $color-white;
       border-radius: 2.8rem;
     }
 
-    &-name input::placeholder,
-    &-surname input::placeholder,
+    input,
+    textarea {
+      margin-left: 2.5rem;
+    }
+
     &-dropdown-option,
     &-dropdown-btn {
+      font-family: "Lexend", sans-serif;
       color: $color-grey-2;
       font-size: 1.4rem;
       font-weight: 500;
-      font-family: "Lexend", sans-serif;
+    }
+
+    &-dropdown {
+      width: 100%;
+      height: 5.6rem;
+      margin-left: 2.5rem;
+
+      &-btn {
+        width: 100%;
+      }
     }
 
     &-message textarea {
@@ -156,7 +171,6 @@
       height: 14.4rem;
       position: relative;
       resize: none;
-      font-family: "Lexend", sans-serif;
     }
 
     #message-counter {
@@ -173,9 +187,8 @@
 
     .custom-checkbox {
       display: flex;
-      width: 78%;
       cursor: pointer;
-      padding-left: 0;
+      padding-left: 20%;
 
       input {
         display: none;
@@ -212,6 +225,19 @@
 
         &::after {
           opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .joinform {
+    &__form {
+      .custom-checkbox{
+        .checkbox {
+          width: 7rem;
+          height: 2rem;
         }
       }
     }

@@ -6,8 +6,11 @@ body {
   color: $color-grey-3;
 }
 
-input::placeholder {
+input::placeholder, textarea {
   font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  color: $color-grey-2;
+  font-size: 1.4rem;
 }
 
 .text-medium {
