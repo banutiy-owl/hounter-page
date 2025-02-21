@@ -1,3 +1,13 @@
+//------start of header
+const burgerMenu = document.getElementById('burgerMenu');
+const navMenu = document.getElementById('navMenu');
+
+burgerMenu.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+
+//------end of header
+
 //------start of featured house section
 const featuredHouseSlider = document.querySelector(".featured-house__list");
 const arrowLeft = document.querySelector("#arrow-left");

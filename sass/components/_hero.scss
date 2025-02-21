@@ -1,5 +1,5 @@
 .section-hero {
-  margin-top:-20rem;
+  margin-top: -12rem;
   background: radial-gradient(
       60% 110% at top left,
       #82f7ff -45%,
@@ -9,6 +9,7 @@
 
   .container {
     display: flex;
+    justify-content: space-between;
   }
   .left {
     flex: 1;
@@ -28,12 +29,12 @@
     display: flex;
     flex-direction: column;
     width: 47%;
-    height: 110vh;
+    border-radius: 0 0 0 8rem;
 
     background-image: url(../imgs/hero.jpeg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: center center;
   }
 
   @media (max-width: 768px) {
@@ -44,6 +45,42 @@
     .left {
       padding: 2rem 1rem;
       text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-hero {
+    .left {
+      padding: 5rem;
+
+      .heading,
+      p {
+        padding: 0 5rem;
+      }
+
+      .search {
+        padding-left: 5rem;
+
+        form {
+          width: 34.2rem;
+
+          button {
+            padding: 1.2rem;
+            p {
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      .partnership--companies{
+        padding-left: 5rem;
+
+        img{
+          width: 7rem;
+        }
+      }
     }
   }
 }
