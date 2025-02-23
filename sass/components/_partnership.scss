@@ -8,3 +8,40 @@
     justify-content: space-between;
   }
 }
+
+@media (max-width: 1330px) {
+  .partnership {
+    padding-left: 5rem;
+    p {
+      padding-left: 0;
+    }
+    &--companies {
+      img {
+        width: 7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .partnership {
+    width: 100%;
+    &--companies {
+      margin-top: 0.8rem;
+
+      img {
+        width: 8.4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .partnership {
+    &--companies {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+}

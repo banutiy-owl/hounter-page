@@ -23,6 +23,23 @@ document.addEventListener("click", (e) => {
   }
 });
 
+const links = document.querySelectorAll(".header__dropdown-item a");
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (isBurgerOpen) {
+      headerBurgerMenu.style.display = "none";
+      isBurgerOpen = false;
+    }
+  });
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1330) {
+    headerBurgerMenu.style.display = "none";
+    isBurgerOpen = false;
+  }
+});
 
 //------end of header
 
@@ -105,9 +122,20 @@ document.querySelector(".close-button").addEventListener("click", function () {
   document.querySelector(".close-button").style.display = "none";
 });
 
+const tourSubtitle = document.querySelector(".tour .subtitle");
+
+if (window.innerWidth <= 876) {
+  tourSubtitle.classList.remove("subtitle");
+  tourSubtitle.classList.add("subtitle-above");
+} else {
+  tourSubtitle.classList.remove("subtitle-above");
+  tourSubtitle.classList.add("subtitle");
+}
+
 //------end of tour section
 
 //------start of about section
+
 const aboutDots = document.querySelectorAll('.about__dots input[type="radio"]');
 const aboutSlider = document.querySelector(".about__slider");
 const aboutCards = document.querySelectorAll(".about__card");
@@ -130,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const aboutSlider = document.querySelector(".about__slider");
   const aboutCards = document.querySelectorAll(".about__card");
   const aboutDotLabels = document.querySelectorAll(".about__dot");
+  aboutDotLabels[0].classList.add("active");
 
   function updateDotsOnScroll() {
     const sliderWidth = aboutSlider.offsetWidth;
@@ -199,6 +228,9 @@ document.addEventListener("touchend", () => {
   isDragging = false;
   aboutSlider.style.cursor = "grab";
 });
+
+
+
 
 //------end of about section
 

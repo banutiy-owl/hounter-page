@@ -17,7 +17,7 @@
         rgba(130, 187, 255, 0) 70%
       ),
       radial-gradient(
-        ellipse at 100% 50%,
+        ellipse at 100% 60%,
         rgba(130, 187, 255, 0.6) 0%,
         rgba(130, 187, 255, 0) 70%
       );
@@ -80,6 +80,25 @@
       &:hover {
         color: $color-primary;
       }
+    }
+  }
+}
+
+
+@media(max-width: 946px){
+  .footer{
+    padding: 15rem 5rem;
+    &__left{
+      width: 60%;
+      padding-right: 0;
+    }
+    &__right{
+      width: 40%;
+    }
+
+    &__parts{
+      display: flex;
+      flex-direction: column;
     }
   }
 }
