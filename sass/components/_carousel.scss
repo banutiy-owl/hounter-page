@@ -1,6 +1,6 @@
 .carousel-container {
   position: relative;
-  margin-top: 55rem;
+  margin-bottom: 3rem;
 }
 
 .carousel {
@@ -12,7 +12,7 @@
   flex-wrap: nowrap;
 
   overflow-x: auto;
- // scroll-snap-type: x mandatory;
+  // scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
   transition: all 0.3s ease-in-out;
@@ -74,8 +74,6 @@
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
-
-    
   }
 
   &-first &__content {
@@ -114,3 +112,5 @@
     }
   }
 }
+
+

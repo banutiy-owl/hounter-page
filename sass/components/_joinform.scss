@@ -35,7 +35,7 @@
 
     padding: 4rem;
     border-radius: 0.8rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1.8rem rgba(0, 0, 0, 0.2);
     &-text {
       margin: 2.8rem 0 5.6rem;
       display: flex;
@@ -65,7 +65,7 @@
     width: 57%;
     padding: 4rem;
     border-radius: 0.8rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1.8rem rgba(0, 0, 0, 0.2);
   }
 
   &__form {
@@ -84,7 +84,7 @@
         display: none;
         position: absolute;
 
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         width: 100%;
         margin-top: 0.5rem;
@@ -234,12 +234,34 @@
 @media (max-width: 1024px) {
   .joinform {
     &__form {
-      .custom-checkbox{
+      .custom-checkbox {
         .checkbox {
           width: 7rem;
           height: 2rem;
         }
       }
     }
+  }
+}
+
+@media (max-width: 887px) {
+  .joinform {
+    flex-direction: column;
+
+    &__left {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &__right {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 639px){
+  .joinform{
+    padding: 0;
   }
 }

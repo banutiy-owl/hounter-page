@@ -128,3 +128,26 @@
     }
   }
 }
+
+
+@media (max-width: 988px) {
+  .subscribe {
+    &__pictures {
+      #sub-1, #sub-3, #sub-6, #sub-8 {
+        display: none;
+       }
+    }
+  }
+}
+
+@media (max-width: 717px) {
+  .subscribe{
+    margin: 15rem 5rem;
+   &__block{
+    padding: 5rem 3rem;
+   }
+    &__form{
+      width: 100%;
+    }
+  }
+}

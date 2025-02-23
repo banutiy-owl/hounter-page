@@ -70,7 +70,6 @@
     height: 1rem;
     transform: rotate(90deg);
   }
-  
 }
 
 .navigation__item-wrapper {
@@ -91,7 +90,6 @@
   border-radius: 1rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-
 }
 
 .dropdown-item {
@@ -103,14 +101,17 @@
   justify-content: center;
   align-items: center;
 
-  &--1{
+  &--1 {
     border-radius: 1rem 1rem 0 0;
   }
 
-  &--last{
+  &--last {
     border-radius: 0 0 1rem 1rem;
   }
-  
+
+  &:hover {
+    background-color: rgba($color-white, 0.2);
+  }
 }
 
 .burger-menu {
@@ -126,47 +127,6 @@
   .burger-menu {
     display: flex;
     z-index: 1;
-    color:white;
+    color: white;
   }
 }
-
-
-.dropdown-item:hover {
-  background-color: rgba($color-white, 0.2);
-}
-
-@media (max-width: 768px) {
-  .navigation {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .navigation__item {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .header {
-    flex-direction: column;
-    text-align: center;
-    background-color: rgba($color-white, 0.8);
-  }
-
-  .navigation {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .navigation__item {
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .hero {
-    background-size: 100% 100%;
-  }
-}
-
-

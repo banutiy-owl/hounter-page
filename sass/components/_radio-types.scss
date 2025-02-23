@@ -40,3 +40,19 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .featured-house__head-types{
+    label{
+      .radio-house-option{
+        span{
+          display: none;
+        }
+        svg {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

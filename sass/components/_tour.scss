@@ -1,6 +1,9 @@
 .tour {
   padding: 0 10rem;
   position: relative;
+  .heading-tour {
+    display: none;
+  }
 
   &-main-img-video {
     position: relative;
@@ -20,7 +23,6 @@
       height: 41.6rem;
       width: 43rem;
       object-fit: cover;
-    
     }
   }
 
@@ -179,7 +181,6 @@
     .main-video-checked {
       width: 34.6rem;
       height: 35.8rem;
-     
     }
     &-content {
       &__right {
@@ -220,7 +221,155 @@
     }
 
     .close-button {
-      top:4rem;
+      top: 4rem;
+    }
+  }
+}
+
+@media (max-width: 876px) {
+  .tour {
+    padding: 0 5rem;
+    text-align: center;
+
+    .subtitle {
+      margin-left: 0;
+    }
+    &-content {
+      margin: 0 auto;
+      flex-direction: column-reverse;
+      &__right {
+        padding: 3rem 0;
+        margin: 0 auto;
+        &-imgs {
+          margin: 0;
+          padding: 0;
+          padding-left: 1.5rem;
+
+          .main-image {
+            height: 34.6rem;
+            width: 36.8rem;
+          }
+        }
+      }
+
+      &__left {
+        width: 45rem;
+        margin: 0 auto;
+        text-align: center;
+        .paragraph {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+        .house-detail-grid {
+          width: 100%;
+        }
+
+        hr {
+          width: 46.5rem;
+        }
+
+        &--info-contact {
+          width: 50rem;
+        }
+      }
+    }
+
+    .heading-tour {
+      display: block;
+      padding-top: 1rem;
+
+      &-left {
+        display: none;
+      }
+    }
+
+    &-main-img-video {
+      padding: 0;
+      height: 34.6rem;
+      width: 36.8rem;
+      svg {
+        left: 16.4rem;
+        top: 18rem;
+      }
+    }
+    .main-video-checked {
+      margin: 0;
+      height: 34.6rem;
+      width: 36.8rem;
+    }
+    .tour-top-grey {
+      height: 34.6rem;
+      width: 36.8rem;
+    }
+    .close-button {
+      top: 4rem;
+      left: 33rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .tour {
+    &-content {
+      align-items: center;
+      &__left {
+        width: 100%;
+        &--info {
+          &-contact {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+
+            gap: 2.4rem;
+
+            .owner-info {
+              margin: 0 auto;
+            }
+          }
+          &-house-detail {
+            margin: 0 auto;
+          }
+        }
+
+        hr {
+          width: 32.5rem;
+        }
+      }
+
+      &__right {
+        &-imgs {
+          padding-left: 0;
+
+          .main-image {
+            height: 30.6rem;
+            width: 31.8rem;
+          }
+        }
+      }
+    }
+
+    &-main-img-video {
+      padding: 0;
+      height: 30.6rem;
+      width: 31.8rem;
+      svg {
+        left: 13.4rem;
+        top: 14rem;
+      }
+    }
+    .main-video-checked {
+      margin: 0;
+      height: 30.6rem;
+      width: 31.8rem;
+    }
+    .tour-top-grey {
+      height: 30.6rem;
+      width: 31.8rem;
+    }
+    .close-button {
+      top: 4rem;
+      left: 28rem;
     }
   }
 }

@@ -104,3 +104,35 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .featured-house {
+    &__head {
+      padding: 1rem 5rem;
+      &-types {
+        gap: 1.3rem;
+        label{
+          padding: 1.2rem 2rem;
+        }
+      }
+      h2{
+        padding-right: 2rem;
+      }
+    }
+
+    &__list {
+      padding: 5rem 7rem;
+      }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .featured-house {
+    &__head {
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+    }}
+}

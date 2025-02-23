@@ -95,3 +95,15 @@
   }
 
 }
+
+
+@media(max-width: 768px){
+  .about{
+    &__slider {
+      padding: 0 7rem;
+    }
+    &__head{
+      padding: 0 5rem;
+    }
+  }
+}
