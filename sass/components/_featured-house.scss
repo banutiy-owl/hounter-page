@@ -128,11 +128,16 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 624px) {
   .featured-house {
+    padding: 10rem 0;
     &__head {
       display: flex;
       flex-direction: column;
-      gap: 2.8rem;
+      gap: 1rem;
+
+      h2{
+        padding: 0;
+      }
     }}
 }

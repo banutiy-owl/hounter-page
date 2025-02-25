@@ -42,7 +42,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 844px) {
   .featured-house__head-types{
     label{
       .radio-house-option{
@@ -51,6 +51,21 @@
         }
         svg {
           margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 624px) {
+  .featured-house__head-types{
+    label{
+      .radio-house-option{
+        span{
+          display: flex;
+        }
+        svg {
+          margin-right: 1rem;
         }
       }
     }

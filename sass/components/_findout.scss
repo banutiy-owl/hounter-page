@@ -126,22 +126,55 @@
       flex-direction: column-reverse;
       gap: 5rem;
 
-      &--right{
+      &--right {
         padding: 0 7rem;
       }
     }
-    
   }
 }
 
-
-@media(max-width: 500px){
+@media(max-width: 792px){
   .findout{
     padding: 0 5rem;
     &__container{
-      &--right{
+
+      &--right {
         padding: 0;
       }
+    }
+
+    &__card{
+      &-main-image{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .findout {
+    padding: 0 5rem;
+    &__container {
+      &--right {
+        padding: 0;
+      }
+      
+    }
+
+    &__card{
+      flex-direction: column;
+      &-image{
+        margin: 2rem auto;
+        width: 100%;
+      }
+      
+      
+    }
+
+    &-gradient {
+      filter: blur(30px);
+      height: 60rem;
+      width: 35rem;
     }
   }
 }
