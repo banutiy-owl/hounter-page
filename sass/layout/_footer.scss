@@ -87,7 +87,7 @@
 
 @media(max-width: 946px){
   .footer{
-    padding: 15rem 5rem;
+    padding: 10rem 5rem;
     &__left{
       width: 60%;
       padding-right: 0;
@@ -99,6 +99,21 @@
     &__parts{
       display: flex;
       flex-direction: column;
+    }
+  }
+}
+
+@media(max-width: 500px){
+  .footer{
+    flex-direction: column;
+    gap: 4rem;
+
+    &__left{
+      width: 100%;
+
+    }
+    &__right{
+      width: 100%;
     }
   }
 }

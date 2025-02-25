@@ -265,3 +265,13 @@
     padding: 0;
   }
 }
+
+@media(max-width: 429px){
+  .joinform{
+    &__form{
+      &-dropdown-btn{
+        height: 7rem;
+      }
+    }
+  }
+}

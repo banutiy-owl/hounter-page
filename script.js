@@ -93,6 +93,26 @@ filterFeaturedHouseCardsByType(
   document.querySelector('input[name="radioTypeHouses"]:checked').value
 );
 
+const featuredHouseSubtitle = document.querySelector(
+  ".featured-house .subtitle"
+);
+
+function updateFeaturedHouseSubtitleClass() {
+  if (window.innerWidth <= 624) {
+    featuredHouseSubtitle.classList.remove("subtitle");
+    featuredHouseSubtitle.classList.remove("u-margin-left-body");
+    featuredHouseSubtitle.classList.add("subtitle-above");
+  } else {
+    featuredHouseSubtitle.classList.remove("subtitle-above");
+    featuredHouseSubtitle.classList.add("u-margin-left-body");
+    featuredHouseSubtitle.classList.add("subtitle");
+  }
+}
+
+updateFeaturedHouseSubtitleClass();
+
+window.addEventListener("resize", updateFeaturedHouseSubtitleClass);
+
 //------end of featured house section
 
 //------start of tour section
@@ -124,13 +144,19 @@ document.querySelector(".close-button").addEventListener("click", function () {
 
 const tourSubtitle = document.querySelector(".tour .subtitle");
 
-if (window.innerWidth <= 876) {
-  tourSubtitle.classList.remove("subtitle");
-  tourSubtitle.classList.add("subtitle-above");
-} else {
-  tourSubtitle.classList.remove("subtitle-above");
-  tourSubtitle.classList.add("subtitle");
+function updateTourSubtitleClass() {
+  if (window.innerWidth <= 876) {
+    tourSubtitle.classList.remove("subtitle");
+    tourSubtitle.classList.add("subtitle-above");
+  } else {
+    tourSubtitle.classList.remove("subtitle-above");
+    tourSubtitle.classList.add("subtitle");
+  }
 }
+
+updateTourSubtitleClass();
+
+window.addEventListener("resize", updateTourSubtitleClass);
 
 //------end of tour section
 
@@ -228,9 +254,6 @@ document.addEventListener("touchend", () => {
   isDragging = false;
   aboutSlider.style.cursor = "grab";
 });
-
-
-
 
 //------end of about section
 

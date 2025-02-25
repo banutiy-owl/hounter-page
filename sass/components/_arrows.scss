@@ -60,6 +60,16 @@
       }
     }
   }
+}
 
-  
+
+@media(max-width: 624px){
+  .radio-wrapper {
+    .radio-label {
+      .circle {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+  }
 }

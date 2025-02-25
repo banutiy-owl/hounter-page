@@ -62,9 +62,21 @@
         z-index: 11;
       }
     }
+
+    &__dropdown{
+      &-item{
+        &--first{
+          border-radius: 1rem 1rem 0 0 ;
+        }
+
+        &--last{
+          border-radius: 0 0 1rem 1rem;
+        }
+      }
+    }
     .header-gradient {
       position: absolute;
-      top:70rem;
+      top: 70rem;
       left: 0;
       z-index: -1;
       height: 70rem;
@@ -75,6 +87,15 @@
           transparent 70%
         ),
         radial-gradient(110% 80% at 10% 10%, #82ffd2 0%, transparent 80%);
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .header {
+    .header-gradient {
+      height: 60rem;
+      width: 30rem;
     }
   }
 }

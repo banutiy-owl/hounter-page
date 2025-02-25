@@ -48,6 +48,10 @@
       border-radius: 1.6rem;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
+      &-text {
+        margin-bottom: 2.4rem;
+      }
+
       &-info {
         display: flex;
         justify-content: space-between;
@@ -74,8 +78,6 @@
     & input[type="radio"] {
       display: none;
     }
-
-   
   }
 
   &__dot {
@@ -89,20 +91,74 @@
     border-radius: 50%;
 
     transition: background-color 0.3s;
-    &.active{
+    &.active {
       background-color: $color-grey-3;
     }
   }
-
 }
 
+@media (max-width: 660px) {
+  .about {
+    &__card {
+      flex-shrink: 0;
+      position: relative;
+      width: 35rem;
+      height: 55rem;
+      &-img img {
+        height: 42rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.8rem;
+      }
+      &-review {
+        top: 40%;
+        padding: 2.3rem;
+        margin: 0 6%;
 
-@media(max-width: 768px){
-  .about{
+        h4 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
+        &-text {
+          margin-bottom: 1.4rem;
+          
+            height: 18.7rem;
+          
+        }
+
+        &-info-personal {
+          .owner-info {
+            align-items: center;
+            h4 {
+              font-size: 1.2rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+
+            img {
+              width: 2.4rem;
+              height: 2.4rem;
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
     &__slider {
       padding: 0 7rem;
     }
-    &__head{
+    &__head {
       padding: 0 5rem;
     }
   }

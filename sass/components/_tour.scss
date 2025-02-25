@@ -309,7 +309,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 578px) {
   .tour {
     &-content {
       align-items: center;
@@ -325,6 +325,9 @@
 
             .owner-info {
               margin: 0 auto;
+              button{
+                margin: 0 auto;
+              }
             }
           }
           &-house-detail {
@@ -333,7 +336,7 @@
         }
 
         hr {
-          width: 32.5rem;
+          width: 100%;
         }
       }
 
