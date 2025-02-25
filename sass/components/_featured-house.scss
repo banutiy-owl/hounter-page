@@ -16,7 +16,9 @@
     display: flex;
     overflow-x: auto;
     padding: 5rem 10rem;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    scroll-padding-inline-start: 4rem;
     gap: 3.2rem;
 
     &::-webkit-scrollbar {
@@ -28,6 +30,7 @@
       flex-shrink: 0;
       width: 37.6rem;
       display: none;
+      scroll-snap-align: start;
 
       &.visible {
         display: block;
@@ -94,17 +97,16 @@
       padding-right: 8rem;
       &-types {
         gap: 1.3rem;
-        label{
+        label {
           padding: 1.2rem 2rem;
         }
       }
-      h2{
+      h2 {
         padding-right: 2rem;
       }
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .featured-house {
@@ -112,21 +114,20 @@
       padding: 1rem 5rem;
       &-types {
         gap: 1.3rem;
-        label{
+        label {
           padding: 1.2rem 2rem;
         }
       }
-      h2{
+      h2 {
         padding-right: 2rem;
       }
     }
 
     &__list {
       padding: 5rem 7rem;
-      }
+    }
   }
 }
-
 
 @media (max-width: 624px) {
   .featured-house {
@@ -136,8 +137,9 @@
       flex-direction: column;
       gap: 1rem;
 
-      h2{
+      h2 {
         padding: 0;
       }
-    }}
+    }
+  }
 }

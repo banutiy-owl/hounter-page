@@ -47,7 +47,8 @@ window.addEventListener("resize", () => {
 const featuredHouseSlider = document.querySelector(".featured-house__list");
 const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
-
+const featuredCards = document.querySelectorAll(".featured-house__list-card");
+/*
 const scrollStep = 300;
 
 arrowLeft.addEventListener("click", () => {
@@ -62,6 +63,40 @@ arrowRight.addEventListener("click", () => {
     left: scrollStep,
     behavior: "smooth",
   });
+});*/
+
+document.addEventListener("DOMContentLoaded", function () {
+let currentFeaturedHouseIndex = 0;
+const cardWidth = featuredCards[0].offsetWidth;
+console.log(featuredCards[0].offsetWidth);
+
+function moveSlider() {
+  if( currentFeaturedHouseIndex === 0){
+    featuredHouseSlider.scrollLeft = cardWidth * currentFeaturedHouseIndex;
+  } else{
+  featuredHouseSlider.scrollLeft = cardWidth * currentFeaturedHouseIndex+70;
+  }
+}
+
+function handleLeftArrow() {
+ 
+  if (currentFeaturedHouseIndex > 0) {
+    currentFeaturedHouseIndex--;
+    moveSlider();
+  }
+}
+
+function handleRightArrow() {
+  if (currentFeaturedHouseIndex < featuredCards.length - 1) {
+    currentFeaturedHouseIndex++;
+    moveSlider();
+  }
+}
+
+arrowLeft.addEventListener("click", handleLeftArrow);
+arrowRight.addEventListener("click", handleRightArrow);
+
+moveSlider();
 });
 
 const featuredHouseRadioButtons = document.querySelectorAll(
