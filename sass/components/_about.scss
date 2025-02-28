@@ -97,6 +97,8 @@
   }
 }
 
+
+
 @media (max-width: 660px) {
   .about {
     &__card {
@@ -160,6 +162,34 @@
     }
     &__head {
       padding: 0 5rem;
+    }
+
+    &__card {
+      flex-shrink: 0;
+      position: relative;
+      width: 55rem;
+      height: 55rem;
+      &-img img {
+        height: 42rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.8rem;
+      }
+      &-review {
+        top: 40%;
+        padding: 2.3rem;
+        margin: 0 6%;
+
+       
+        &-text {
+          margin-bottom: 1.4rem;
+          
+            height: 18.7rem;
+          
+        }
+
+       
+      }
     }
   }
 }
