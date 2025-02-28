@@ -961,7 +961,24 @@ input::placeholder, textarea {
   .about__slider {
     padding: 0 7rem; }
   .about__head {
-    padding: 0 5rem; } }
+    padding: 0 5rem; }
+  .about__card {
+    flex-shrink: 0;
+    position: relative;
+    width: 55rem;
+    height: 55rem; }
+    .about__card-img img {
+      height: 42rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.8rem; }
+    .about__card-review {
+      top: 40%;
+      padding: 2.3rem;
+      margin: 0 6%; }
+      .about__card-review-text {
+        margin-bottom: 1.4rem;
+        height: 18.7rem; } }
 
 .findout {
   padding: 0 10rem;
